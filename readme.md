@@ -1,7 +1,7 @@
 # Kuis-RPL-Software-Testing
 
 
-COBAI 2
+COBAI 2 ini pun fadil
 
 
 # Kuis 1 (90)
