@@ -12,7 +12,7 @@ No 2.
 Unit test dan integration test merupakan test yang dilakukan pada tahap implementasi.
 berikan pendapat kalian jika dua test ini tidak dilakukan beserta dampak yang akan terjadi pada perangkat lunak
 ::
-
+asdasdasd
 
 No 3.
 Berikan pendapat kalian tentang pekerjaan QA Engineer sedangkan disisi lain Software Engineer
