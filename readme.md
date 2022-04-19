@@ -1,5 +1,8 @@
-Cobai Fetch
 # Kuis-RPL-Software-Testing
+
+
+COBAI 2
+
 
 # Kuis 1 (90)
 1. Dewasa ini, pembuatan testing pada perangkat lunak umum dilakukan pada saat tahap implementasi yang dilakukan oleh software
