@@ -1,6 +1,6 @@
 /*
 1. Dewasa ini, pembuatan testing pada perangkat lunak umum dilakukan pada saat tahap implementasi yang dilakukan oleh software engineer. Berikan opini kalian apakah software engineer pada tahap implementasi wajib melakukan test atau tidak?
-
+Jawab : Test
 2. Unit test dan integration test merupakan test yang dilakukan pada tahap implementasi. berikan pendapat kalian jika dua test ini tidak dilakukan beserta dampak yang akan terjadi pada perangkat lunak
 
 3. Berikan pendapat kalian tentang pekerjaan QA Engineer sedangkan disisi lain Software Engineer telah melakukan testing
