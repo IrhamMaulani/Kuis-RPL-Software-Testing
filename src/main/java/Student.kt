@@ -1,5 +1,32 @@
+import com.sun.org.apache.xalan.internal.lib.ExsltDatetime.formatDate
+
 class Student {
-    // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
+    var studentid: Int = 5
+    var nama: String = "Joko Tarbiah"
+    var tlahir: String = "10 Agustus 2019"
+
+    //Member functions of class to set student name
+    fun setStudentName(nama:String){
+        this.nama=nama
+    }
+
+    //Member functions of class to set student age
+    fun setStudentAge(tlahir:String){
+        this.tlahir=tlahir
+    }
+    fun setStudentId(id:Int){
+        this.studentid=studentid
+    }
+
+
+    //Member functions of class to return student details
+    fun getStudentDetails():String{
+        return "Name :  $nama, Age : $tlahir"
+    }
+
+}
+
+// Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
 
     // properties student berisikan :
