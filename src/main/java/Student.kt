@@ -1,4 +1,15 @@
+import com.sun.org.apache.xalan.internal.lib.ExsltDatetime.formatDate
+
 class Student {
+    var id: Int = 5
+    var nama: String = "Joko Tarbiah"
+    var tanggalLahir: String = "10 Agustus 2019"
+
+    fun ubahFormat(){
+        val formattedDate = formatDate(tanggalLahir,"EEE, dd MMMM yyyy")
+        print("$formattedDate")
+    }
+
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
 
