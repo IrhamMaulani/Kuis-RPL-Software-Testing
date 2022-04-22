@@ -15,7 +15,11 @@ jika software testing ini tidak dilakukan, maka akan berdampak kualitas yang bur
 dan lain sebagainya jika telah sampai ditangan end-users.
 
 3. Berikan pendapat kalian tentang pekerjaan QA Engineer sedangkan disisi lain Software Engineer telah melakukan testing
-jawaban :
+jawaban : Mengenai dua pekerjaan tersebut, QA Engineer maupun Software engineer(yang sudah melakukan testing) tentu memiliki tugas utama
+yang berbeda. Kedua tujuan dari tugas mereka memang sama yaitu untuk mengecek apakah terdapat bug didalam aplikasi, namun Software Engineer
+biasanya melalukan testing pada saat pengembangan saja atau pada saat software tersebut akan dirilis. Sedangkan QA Engineer bertanggung jawab
+untuk mencari bug dan mempertahankan kualitas hingga software tersebut dirilis, sehingga ketika software tersebut telah rilis QA Engineer juga
+harusnya memperhatikan customer experience.
 
 4. Terdapat banyak test pada perangkat lunak, mulai dari test business logic, UI, UX, Performa, sampai keamanan. Namun tidak
 semuanya dapat dilakukan karena keterbatasan waktu dan mahalnya biaya yang harus dikeluarkan. Berikan pendapat kalian dampak
