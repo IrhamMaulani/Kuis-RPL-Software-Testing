@@ -11,6 +11,11 @@ internal class StudentTest {
     fun beforeEach() {
         student = Student()
     }
+    
+    @Test
+    fun testDateFormat() {
+        assertEquals("23-04-2022", student.dateFormat())
+    }
 
     @Test
     fun testgetNim() {
