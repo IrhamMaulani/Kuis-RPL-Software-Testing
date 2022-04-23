@@ -21,4 +21,8 @@ internal class StudentTest {
     fun testgetNim() {
         assertEquals("6JT23042022", student.getNim())
     }
+    @Test
+    fun testnohp() {
+        assertEquals("Valid", student.noHp("14022"))
+    }
 }
