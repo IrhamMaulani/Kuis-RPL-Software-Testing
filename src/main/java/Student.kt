@@ -25,6 +25,13 @@ class Student {
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
 
+    val orangTua = object {
+        var ayah = "Stephen Sambura"
+        var ibu = "Stephani Sambruang"
+
+        override fun toString() = "$ayah $ibu"
+    }
+    
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
