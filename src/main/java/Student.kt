@@ -30,8 +30,6 @@ class Student {
     val orangTua = object {
         var ayah = "Stephen Sambura"
         var ibu = "Stephani Sambruang"
-
-        override fun toString() = "$ayah dan $ibu"
     }
     
     /*
