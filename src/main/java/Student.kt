@@ -45,6 +45,9 @@ class Student {
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
 
+    var inisial = nama.trim().splitToSequence(" ").take(2).map { println(it); it.first().uppercase()}.joinToString("")
+    fun getNim(): String = "$id$inisial"
+    
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
     * dan merupakan kode yang berupa gabungan ID, huruf pertama dan akhir dari nama student,
