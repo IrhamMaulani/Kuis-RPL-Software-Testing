@@ -8,7 +8,7 @@ class Student {
 
     fun dateFormat(): String{
         val format1 = SimpleDateFormat("dd-MM-yyyy")
-        val format2 = SimpleDateFormat("dd MMMM yyyy")
+        val format2 = SimpleDateFormat("d MMMM yyyy")
         val date = format1.format(format2.parse(tanggal))
         return date
     }
