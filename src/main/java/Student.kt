@@ -24,7 +24,14 @@ class Student {
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
-
+    
+    fun noHp(Nomor :String ): String {
+        var nomor = Nomor
+        if(nomor.length == 11||nomor.length == 12) {
+            return "Valid"
+        }
+        return "No Salah"
+    }
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
 
     val orangTua = object {
