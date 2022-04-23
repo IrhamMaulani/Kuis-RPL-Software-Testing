@@ -29,7 +29,7 @@ class Student {
         var ayah = "Stephen Sambura"
         var ibu = "Stephani Sambruang"
 
-        override fun toString() = "$ayah $ibu"
+        override fun toString() = "$ayah dan $ibu"
     }
     
     /*
