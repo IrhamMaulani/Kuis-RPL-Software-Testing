@@ -7,8 +7,9 @@ class Student {
     var tanggal:String = "23 April 2022"
 
     fun dateFormat(){
-        val format = SimpleDateFormat("dd-mm-yyyy")
-        val date = format.parse(tanggal)
+        val format1 = SimpleDateFormat("dd MMMM yyyy")
+        val format2 = SimpleDateFormat("dd-MM-yyyy")
+        val date = format2.format(format1.parse(tanggal))
     }
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
