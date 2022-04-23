@@ -1,4 +1,15 @@
+import java.text.SimpleDateFormat
+
 class Student {
+
+    var id:Int = 6
+    var nama:String = "Joko Tingkir"
+    var tanggal:String = "23 April 2022"
+
+    fun dateFormat(){
+        val format = SimpleDateFormat("dd-mm-yyyy")
+        val date = format.parse(tanggal)
+    }
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
 
