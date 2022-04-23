@@ -6,10 +6,11 @@ class Student {
     var nama:String = "Joko Tingkir"
     var tanggal:String = "23 April 2022"
 
-    fun dateFormat(){
-        val format1 = SimpleDateFormat("dd MMMM yyyy")
-        val format2 = SimpleDateFormat("dd-MM-yyyy")
-        val date = format2.format(format1.parse(tanggal))
+    fun dateFormat(): String{
+        val format1 = SimpleDateFormat("dd-MM-yyyy")
+        val format2 = SimpleDateFormat("dd MMMM yyyy")
+        val date = format1.format(format2.parse(tanggal))
+        return date
     }
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
