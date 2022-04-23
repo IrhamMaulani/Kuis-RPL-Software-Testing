@@ -47,8 +47,13 @@ class Student {
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
 
-    var inisial = nama.trim().splitToSequence(" ").take(2).map { println(it); it.first().uppercase()}.joinToString("")
-    fun getNim(): String = "$id$inisial"
+    fun getNim(): String {
+        val df1 = SimpleDateFormat("ddMMyyyy")
+        val df2 = SimpleDateFormat("dd MMMM yyyy")
+        val tgl = df1.format(df2.parse(tanggal))
+        val inisial = nama.trim().splitToSequence(" ").take(2).map { println(it); it.first().uppercase()}.joinToString("")
+        return "$id$inisial$tgl"
+    }
     
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
