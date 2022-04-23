@@ -38,7 +38,7 @@ class Student {
     */
 
     private val hobi: List<String> =
-        ListOf("Swimming", "Basketball", "Volleyball", "Cooking", "Running")
+        listOf("Swimming", "Basketball", "Volleyball", "Cooking", "Running")
     
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
