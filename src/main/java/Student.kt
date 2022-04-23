@@ -7,7 +7,6 @@ import java.util.*
 class Student {
 
     var id = Locale("in", "ID")
-    var dfs = DateFormatSymbols(id)
 
     var IDStudent: Int = 5
     var NAMA: String = "Joko Tarbiah"
@@ -15,7 +14,7 @@ class Student {
 
     fun tanggal(tanggal: String): String? {
         val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", id)
-        val date = LocalDate.parse(TanggalLahir, formatter)
+        val date = LocalDate.parse(tanggal, formatter)
         val hasil = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
 
         return (hasil)
