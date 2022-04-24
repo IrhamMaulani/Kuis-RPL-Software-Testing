@@ -1,4 +1,26 @@
+import java.text.DateFormatSymbols
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
+
+
 class Student {
+
+    var id = Locale("in", "ID")
+
+    var IDStudent: Int = 5
+    var NAMA: String = "Joko Tarbiah"
+    var TanggalLahir: String = "10 Agustus 2019"
+
+    fun tanggal(tanggal: String): String? {
+        val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", id)
+        val date = LocalDate.parse(tanggal, formatter)
+        val hasil = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
+
+        return (hasil)
+    }
+
+
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
 
