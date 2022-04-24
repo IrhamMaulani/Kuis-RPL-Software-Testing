@@ -5,28 +5,43 @@ class Student {
     // properties student berisikan :
 
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
-    var id : Int
+    var id : Int = 5
 
     // Nama bertipe String, Contoh : Joko Tarbiah
-    var nama : String
+    var nama : String = "Joko Tarbiah"
 
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
-    val tanggalLahir : String
+    val tanggalLahir : String = "10 Agustus 2019"
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
-
+    fun date(tanggalLahir:String) : String{
+        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy", Locale("in", "ID"))
+        tanggal = LocalDateTime.parse(tanggalLahir, formatter)
+        return "$tanggal"
+    }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
+    val noHp : String = "08980000000"
+    fun no(noHp : String){
+        if (noHp.length >= 11 and noHp.length <= 12){
+            return /* no-op */
+        } else {
+            return false
+        }
+    }
 
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
 
+
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
+    var hobi: List<String> =
+        listOf("Bersepeda", "Bernyanyi", "Makan")
 
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
