@@ -5,5 +5,8 @@ fun main(args: Array<String>) {
     println("Nama ${student.nama}")
     println("NIM ${student.nim}")
     println("Tanggal Lahir ${student.tanggalLahir}")
+    println("Orang tua")
+    println("Ayah ${student.orangTua.ayah}")
+    println("Ibu ${student.orangTua.ibu}")
 
 }
