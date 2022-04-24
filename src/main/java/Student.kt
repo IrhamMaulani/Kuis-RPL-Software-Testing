@@ -24,30 +24,14 @@ class Student {
         this.ibu = ""
     }
 
-    object orangTua{
-        fun takeParams(ayah: String, ibu: String): String {
-            return takeParams(ayah,ibu)
-        }
-    }
-
-    var ortu = orangTua.takeParams("Stepen Sambura", "Stepani Samburang")
-
-
-
     //Fungsi ubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy
-    fun tanggal(tanggal: String): String? {
+    fun formatTanggal(tanggal: String): String? {
         val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", indonesia)
         val date = LocalDate.parse(tanggal, formatter)
         val hasil = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
 
         return (hasil)
     }
-
-    // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
-
-    // Nama bertipe String, Contoh : Joko Tarbiah
-
-    // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
     fun hp(no: String): String {
@@ -77,7 +61,6 @@ class Student {
     * Tanggal Lahir : 10 Agustus 2019.
     * NIM nya menjadi : 5JT10082019
     * */
-
     fun NIM (id: Int, nama: String, tanggalLahir: String): String {
         val tempNIM = mutableListOf<String>()
         val namaFirst = nama.take(1)
