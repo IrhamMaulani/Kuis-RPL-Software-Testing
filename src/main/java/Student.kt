@@ -35,6 +35,15 @@ class Student {
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
+    var nomorHp: String = "087842152461"
+    fun hp(): String {
+        if(nomorHp.length == 11 or nomorHp.length 12){
+
+        } else {
+            return "kd sesuai oi"
+        }
+    }
+
 
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
@@ -45,6 +54,7 @@ class Student {
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
+    val hobi: Array<String> = arrayOf('Bersepeda', 'Bernyanyi', 'Makan')
 
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
