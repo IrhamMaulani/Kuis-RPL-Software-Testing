@@ -7,9 +7,8 @@ import java.util.*
 class Student {
 
     var id = Locale("in", "ID")
-
     var IDStudent: Int = 5
-    var NAMA: String = "Joko Tarbiah"
+    var Nama: String = "Joko Tarbiah"
     var TanggalLahir: String = "10 Agustus 2019"
 
     fun tanggal(tanggal: String): String? {
