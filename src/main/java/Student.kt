@@ -5,12 +5,16 @@ class Student {
     // properties student berisikan :
 
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
+    var id : Int
 
     // Nama bertipe String, Contoh : Joko Tarbiah
+    var nama : String
 
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
+    val tanggalLahir : String
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
+
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
 
