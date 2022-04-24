@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StudentTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-24T06:42:58" hostname="ULUUM-LENOVOPC" time="0.205">
+<testsuite name="StudentTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-24T21:48:18" hostname="ULUUM-LENOVOPC" time="0.046">
   <properties/>
-  <testcase name="testKonversiTanggal()" classname="StudentTest" time="0.205"/>
+  <testcase name="testNoHpFail()" classname="StudentTest" time="0.046"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
