@@ -69,12 +69,3 @@ class Student {
 }
 
 class OrangTua(val ayah: String,val ibu: String){ }
-
-fun main(args: Array<String>) {
-    val student:Student = Student()
-    println("Nama ${student.nama}")
-    println("NIM ${student.nim}")
-    println("Tanggal Lahir ${student.tanggalLahir}")
-    println("Hobby ${student.hobby}")
-
-}
