@@ -11,7 +11,7 @@ internal class StudentTest {
     fun beforeEach() {
         student = Student()
     }
-    
+
     @Test
     fun testDateFormat() {
         assertEquals("23-04-2022", student.dateFormat())
@@ -24,5 +24,17 @@ internal class StudentTest {
     @Test
     fun testnohp() {
         assertEquals("086753102945", student.noHp("086753102945"))
+    }
+    @Test
+    fun testayah() {
+        assertEquals("stephen Sambura", student.Orangtua.ayah)
+    }
+    @Test
+    fun testibu() {
+        assertEquals("Stephani Sambruang", student.Orangtua.ibu)
+    }
+    @Test
+    fun testhobi() {
+        assertEquals("Swimming, Basketball, Volleyball, Cooking, Running", student.tampilhobi())
     }
 }
