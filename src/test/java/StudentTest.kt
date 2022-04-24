@@ -21,7 +21,7 @@ internal class StudentTest {
     }
 
     @Test
-    fun testGetNumberSuccess(){
+    fun testGetNomorHpSuccess(){
         assertEquals("085312345678", student.getNomorHp("085312345678"))
     }
 
@@ -46,5 +46,12 @@ internal class StudentTest {
         val expectation = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
 
         assertEquals(expectation, hasil, "Hasil tidak sama")
+    }
+
+    @Test
+    fun testNIMSuccess(){
+        val tanggal = student.formatTanggal("10 Agustus 2019")
+        val data = student.NIM(5, "Joko Tarbiah", tanggal)
+        assertEquals("5JT10082019", data)
     }
 }
