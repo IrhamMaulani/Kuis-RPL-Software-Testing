@@ -5,6 +5,11 @@ import java.util.*
 
 class Student {
 
+    // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
+    // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
+
+    // properties student berisikan :
+
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
 
     // Nama bertipe String, Contoh : Joko Tarbiah
