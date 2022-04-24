@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
     println("Tanggal Lahir (reformat) : ${student.tanggal()}")
     println("Conditional Nomor HP : ${student.Phonenum()}")
 
-    val ortu = Student.Orangtua() // create l1 object of Lamp class
+    val ortu = Student.Orangtua()
     ortu.displayortu()
     print("Hobi : ")
     println("${student.arrayhobi()}")
