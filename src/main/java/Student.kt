@@ -30,7 +30,7 @@ class Student() {
     fun getFullIdentification(): String = "$id $nama $tanggalLahir $nomorHp"
 
     //Fungsi ubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy
-    fun formatTanggal(tanggal: String): String? {
+    fun formatTanggal(tanggal: String): String {
         val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", indonesia)
         val date = LocalDate.parse(tanggal, formatter)
         val hasil = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
@@ -68,12 +68,20 @@ class Student() {
     * */
     fun NIM (id: Int, nama: String, tanggalLahir: String): String {
         val tempNIM = mutableListOf<String>()
-        val namaFirst = nama.take(1)
-        val namaLast = nama.takeLast(1)
+        var x = 0
         val tanggal = tanggalLahir.replace("-","")
         tempNIM.add(id.toString())
-        tempNIM.add(namaFirst)
-        tempNIM.add(namaLast)
+
+        if (" " in nama){
+            val namaArray: List<String> = nama.split(" ")
+            while (x < namaArray.size) {
+                tempNIM.add(namaArray[x].take(1))
+                x++
+            }
+        }
+        else {
+            tempNIM.add(nama.take(1))
+        }
         tempNIM.add(tanggal)
         return tempNIM.joinToString("")
     }
