@@ -5,24 +5,29 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-class Student {
+class Student() {
 
     var indonesia = Locale("in", "ID")
     var id: Int
     var nama: String
     var tanggalLahir: String
     var nomorHp: String
-    var ayah: String
-    var ibu: String
+
+    constructor(id: Int, nama: String, tanggalLahir: String, nomorHp: String): this(){
+        this.id = id
+        this.nama = nama
+        this.tanggalLahir = tanggalLahir
+        this.nomorHp = nomorHp
+    }
 
     init {
         this.id = 0
         this.nama = ""
         this.tanggalLahir = ""
         this.nomorHp = ""
-        this.ayah = ""
-        this.ibu = ""
     }
+
+    fun getFullIdentification(): String = "$id $nama $tanggalLahir $nomorHp"
 
     //Fungsi ubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy
     fun formatTanggal(tanggal: String): String? {
@@ -34,11 +39,11 @@ class Student {
     }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
-    fun hp(no: String): String {
+    fun getNomorHp(no: String): String? {
         if(no.length == 11 || no.length == 12){
             return no
         } else {
-            return "kd sesuai oi"
+            return null
         }
     }
 
