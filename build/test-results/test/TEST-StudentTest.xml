@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StudentTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-24T14:46:27" hostname="ARIN" time="0.035">
+<testsuite name="StudentTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-24T14:51:38" hostname="ARIN" time="0.031">
   <properties/>
-  <testcase name="testFullIdentificationSuccess()" classname="StudentTest" time="0.035"/>
+  <testcase name="testGetNumberSuccess()" classname="StudentTest" time="0.031"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

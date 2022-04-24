@@ -21,6 +21,11 @@ internal class StudentTest {
     }
 
     @Test
+    fun testGetNumberSuccess(){
+        assertEquals("085312345678", student.getNomorHp("085312345678"))
+    }
+
+    @Test
     fun testTanggalLahir(){
         val tanggal = student.tanggalLahir
 
