@@ -44,11 +44,33 @@ class Student {
     var id = Locale("in", "ID")
     var dfs = DateFormatSymbols(id)
 
-    var IDStudent: Int = 5
-    var nama: String = "Joko Tarbiah"
-    var tanggalLahir: String = "10 Agustus 2019"
-    var noHP: String = "081234567899"
-    var nim: String = generateNIM(IDStudent,nama, tanggalLahir)
+    var IDStudent: Int = 0
+        get() = field
+        set(value) {
+            field = value
+        }
+    var nama: String = ""
+        get() = field
+        set(value) {
+            field = value
+        }
+    var tanggalLahir: String = ""
+        get() = field
+        set(value) {
+            field = value
+        }
+    var noHP: String = ""
+        get() = field
+        set(value) {
+            if (value.length<11||value.length>12) field = "No Hp Tidak Valid"
+            else field = value
+        }
+
+    var nim: String = ""
+        get() = field
+        set(value) {
+            field = generateNIM(this.IDStudent, this.nama, this.tanggalLahir)
+        }
     var orangTua = OrangTua("Stephen Sambura", "Stephani Sambruang")
     var hobby =  mutableListOf("Bersepeda","Bernyanyi","Makan")
 
