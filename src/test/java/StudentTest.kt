@@ -26,6 +26,12 @@ internal class StudentTest {
     }
 
     @Test
+    fun testSetHobiSuccess(){
+        val hobi = listOf("Bersepeda", "Bermain", "Menyanyi")
+        assertEquals("[Bersepeda, Bermain, Menyanyi]", student.hobi(hobi).toString())
+    }
+
+    @Test
     fun testTanggalLahir(){
         val tanggal = student.tanggalLahir
 

@@ -57,6 +57,11 @@ class Student() {
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
+    fun hobi(array: List<String>): List<String> {
+        val hobi = array.toList()
+        return hobi
+    }
+
     var hobiArrayList = arrayListOf<String>("Bersepeda", "Bernyanyi", "Makan")
 
     /*
