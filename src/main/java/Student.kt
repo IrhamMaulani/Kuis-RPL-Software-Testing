@@ -46,15 +46,16 @@ class Student {
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
-    fun tampilhobi(){
+   fun tampilhobi(): String{
         val a = StringBuilder()
         val hobi: List<String> =
             listOf("Swimming", "Basketball", "Volleyball", "Cooking", "Running")
         for (list in hobi){
             a.append(list).append(", ")
         }
-        val Hobi = a.toString().subSequence(0,a.length-2)
+        val Hobi = a.toString().substring(0,a.length-2)
         println(Hobi)
+        return Hobi
     }
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
