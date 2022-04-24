@@ -1,4 +1,6 @@
 class Student {
+    
+    .
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
 
