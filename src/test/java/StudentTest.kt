@@ -23,6 +23,6 @@ internal class StudentTest {
     }
     @Test
     fun testnohp() {
-        assertEquals("Valid", student.noHp("086753102945"))
+        assertEquals("086753102945", student.noHp("086753102945"))
     }
 }
