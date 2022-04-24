@@ -12,7 +12,7 @@ internal class StudentTest {
 
     @Test
     fun testFormatTanggal(){
-        var tanggal = "10 Agustus 2019"
+        val tanggal = "10 Agustus 2019"
         val hasil = student.tanggal(tanggal)
         Assertions.assertEquals(hasil, "10-08-2019", "Hasil tidak sama")
     }
