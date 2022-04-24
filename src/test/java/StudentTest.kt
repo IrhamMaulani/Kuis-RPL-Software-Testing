@@ -15,6 +15,17 @@ internal class StudentTest {
     }
 
     @Test
+    fun testFullIdentificationSuccess() {
+        val student = Student(5, "Joko Tarbiah", "10 Agustus 2019", "085312345678")
+        assertEquals("5 Joko Tarbiah 10 Agustus 2019 085312345678", student.getFullIdentification(), "Tidak Sesuai")
+    }
+
+    @Test
+    fun testGetNumberSuccess(){
+        assertEquals("085312345678", student.getNomorHp("085312345678"))
+    }
+
+    @Test
     fun testTanggalLahir(){
         val tanggal = student.tanggalLahir
 
