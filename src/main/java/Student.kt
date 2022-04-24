@@ -1,3 +1,9 @@
+import java.text.DateFormatSymbols
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
+import kotlin.collections.ArrayList
+
 class Student {
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
@@ -35,4 +41,38 @@ class Student {
     /*
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
     * */
+
+    var id = Locale("in", "ID")
+    var dfs = DateFormatSymbols(id)
+
+    var IDStudent: Int = 5
+    var nama: String = "Joko Tarbiah"
+    var tanggalLahir: String = "10 Agustus 2019"
+    var noHP: String = "081234567899"
+    var nim: String = generateNIM(IDStudent,nama, tanggalLahir)
+    var orangTua = OrangTua("Stephen Sambura", "Stephani Sambruang")
+    var hobby =  mutableListOf("Bersepeda","Bernyanyi","Makan")
+
+    fun tanggal(tanggal: String): String {
+        val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", id)
+        val date = LocalDate.parse(tanggalLahir, formatter)
+        val hasil = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
+
+        return hasil
+    }
+
+    fun generateNIM(ID: Int, nama: String, tglLahir: String): String{
+        var inisial: String = nama
+            .trim()
+            .split(" ")
+            .mapNotNull { it.firstOrNull()?.toString() }
+            .reduce { acc, s -> acc + s }
+            .uppercase()
+        var tgl: String = tanggal(tglLahir)
+        tgl = tgl.replace("-","")
+        return "${ID.toString()}${inisial}${tgl}"
+    }
+}
+
+class OrangTua(val ayah: String,val ibu: String){
 }
