@@ -29,6 +29,7 @@ class Student {
     fun noHp(Nomor :String = "086753102945" ): String {
         if(Nomor.length == 11||Nomor.length == 12) {
             var nomor = Nomor
+            return nomor
         }
         return "No Salah"
     }
