@@ -17,4 +17,11 @@ kalian dampak apa yang terjadi jika pengujian diatas tidak diberikan pada perang
 No 5.
 Berikan pendapat kalian tentang testing perangkat lunak secara manual? Apakah di saat
 banyaknya testing secara otomatisasi dilakukan testing secara manual perlu dilakukan?
+
+Jawab
+No.1
+Menurut saya, Testing pada perangkat lunak tidak wajib, karena pengujian bisa dilakukan pada tahap testingnya oleh system testing,
+namun kemapuan pembuatan testing oleh software development akan minadi nilai tambahan di dalam persaingan dunia kerja. 
+
+
  */
