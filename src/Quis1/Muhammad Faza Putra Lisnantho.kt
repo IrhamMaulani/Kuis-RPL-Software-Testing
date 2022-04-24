@@ -17,4 +17,26 @@ kalian dampak apa yang terjadi jika pengujian diatas tidak diberikan pada perang
 No 5.
 Berikan pendapat kalian tentang testing perangkat lunak secara manual? Apakah di saat
 banyaknya testing secara otomatisasi dilakukan testing secara manual perlu dilakukan?
+
+
+Jawab: 
+
+1.  Wajib , karena metode testing digunakan software engineer dilakukan sebagai syarat apakah perangkat lunak tersebut sesaui atau tidak 
+dan mencegah kecacatan dalam perangkat lunak.
+
+2. Kedua Test tersebut memiliki fungsi masing-masing , Unit Test berfungsi mengetes di sebuah class yang terkecil program, 
+lalu Integration Test berfungsi mengetes alur proses program. Jika tidak melakukan kedua Test tersebut program yang kita buat , 
+tidak tahu apakah berjalan lancar atau tidak dan apakah sesuai persyaratan.
+
+3. Tugas Software Engineer melakukan testing pada program apakah program berjalan, tetapi melakukan metode testing tidak mendeteksi adanya bug. 
+Sedangkan QA engineer menempatkan diri mereka di skenario terburuk. QA enginner akan menggunakan semua tools untuk memastikan Aplikasi berjalan dengan 
+sesuai kondisi. QA Engineer akan melaporkan kembali bug dan error pada Aplikasi.
+
+4. Untuk banyaknya test memiliki fungsi masing-masing , jika tidak di aplikasikan akan berpengaruh besar bagi user. 
+Metode test ini  berguna untuk mengecek apakah aplikasi tidak cacat, sesuai dengan syarat, aman, dan sesuai keinginan pengguna. 
+testing ini difokuskan pada UI aplikasi. Sedangkan A
+
+5. Testing perangkat lunak secara manual dengan testing secara otomatis memiliki perbedaan. 
+Secara manual untuk mencari cacat atau bug pada program. pada test ini dilakukan tanpa tools atau script, tujuannya untuk memastikan jika aplikasi yang di uji bebas cacat dan 
+aplikasi perangkat lunak dapat bekerja sesuai apa yang di harapkan.  
  */
