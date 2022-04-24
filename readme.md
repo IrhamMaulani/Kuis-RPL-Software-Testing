@@ -1,4 +1,8 @@
-# Kuis-RPL-Software-Testing
+# Kuis-RPL-Software-Testing-Kelompok4
+Anggota:
+- Anis Hanifa (2010817320010)
+- Felisitas Artemisia Rerung (2010817120001)
+- Salsabila Syifa (2010817320004)
 
 # Kuis 1 (90)
 1. Dewasa ini, pembuatan testing pada perangkat lunak umum dilakukan pada saat tahap implementasi yang dilakukan oleh software
