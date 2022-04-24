@@ -1,9 +1,8 @@
-import java.text.DateFormatSymbols
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
+import javax.swing.UIManager.get
 import kotlin.collections.ArrayList
-
 
 class Student() {
 
@@ -12,6 +11,9 @@ class Student() {
     var nama: String
     var tanggalLahir: String
     var nomorHp: String
+    lateinit var ayah: String
+    lateinit var ibu: String
+    lateinit var nim: String
 
     constructor(id: Int, nama: String, tanggalLahir: String, nomorHp: String): this(){
         this.id = id
@@ -52,12 +54,21 @@ class Student() {
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
+    fun orangTua(ayah: String, ibu: String): String {
+        this.ayah = ayah
+        this.ibu = ibu
+        return "ayah: $ayah ibu: $ibu"
+    }
+
 
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
-    var hobiArrayList = arrayListOf<String>("Bersepeda", "Bernyanyi", "Makan")
+    fun hobi(array: List<String>): List<String> {
+        val hobi = array.toList()
+        return hobi
+    }
 
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
@@ -89,4 +100,10 @@ class Student() {
     /*
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
     * */
+    val getStudentArrayList: ArrayList<Student>
+    get() {
+        val list = ArrayList<Student>()
+        list.add(this)
+        return list
+    }
 }
