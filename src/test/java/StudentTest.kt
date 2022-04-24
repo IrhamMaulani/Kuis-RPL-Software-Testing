@@ -26,6 +26,12 @@ internal class StudentTest {
     }
 
     @Test
+    fun testGetOrangTuaSuccess(){
+        assertEquals("ayah: Stephen Sambura ibu: Stephani Sambruang",
+            student.orangTua("Stephen Sambura", "Stephani Sambruang"))
+    }
+
+    @Test
     fun testSetHobiSuccess(){
         val hobi = listOf("Bersepeda", "Bermain", "Menyanyi")
         assertEquals("[Bersepeda, Bermain, Menyanyi]", student.hobi(hobi).toString())
@@ -59,5 +65,11 @@ internal class StudentTest {
         val tanggal = student.formatTanggal("10 Agustus 2019")
         val data = student.NIM(5, "Joko Tarbiah", tanggal)
         assertEquals("5JT10082019", data)
+    }
+
+    @Test
+    fun testStudentArrayList() {
+        val student = Student(5, "Joko Tarbiah", "10 Agustus 2019", "085312345678")
+        assertEquals(student.getStudentArrayList, arrayListOf(student))
     }
 }
