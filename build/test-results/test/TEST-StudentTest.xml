@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StudentTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-04-25T04:44:25" hostname="ARIN" time="0.119">
+<testsuite name="StudentTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-04-25T05:50:29" hostname="LAPTOP-H2V9FNRN" time="0.131">
   <properties/>
-  <testcase name="testFullIdentificationSuccess()" classname="StudentTest" time="0.045"/>
-  <testcase name="testGetNomorHpSuccess()" classname="StudentTest" time="0.001"/>
-  <testcase name="testGetOrangTuaSuccess()" classname="StudentTest" time="0.002"/>
-  <testcase name="testSetHobiSuccess()" classname="StudentTest" time="0.003"/>
+  <testcase name="testFullIdentificationSuccess()" classname="StudentTest" time="0.044"/>
+  <testcase name="testGetNomorHpSuccess()" classname="StudentTest" time="0.006"/>
+  <testcase name="testGetOrangTuaSuccess()" classname="StudentTest" time="0.001"/>
+  <testcase name="testSetHobiSuccess()" classname="StudentTest" time="0.005"/>
   <testcase name="testGetNomorHPFailed()" classname="StudentTest" time="0.002"/>
-  <testcase name="testStudentArrayList()" classname="StudentTest" time="0.008"/>
-  <testcase name="testGetNomorHPError()" classname="StudentTest" time="0.005"/>
-  <testcase name="testNIMSuccess()" classname="StudentTest" time="0.038"/>
+  <testcase name="testStudentArrayList()" classname="StudentTest" time="0.002"/>
+  <testcase name="testGetNomorHPError()" classname="StudentTest" time="0.006"/>
+  <testcase name="testNIMSuccess()" classname="StudentTest" time="0.039"/>
   <testcase name="testTanggalLahir()" classname="StudentTest" time="0.002"/>
   <testcase name="testFormatTanggal()" classname="StudentTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
