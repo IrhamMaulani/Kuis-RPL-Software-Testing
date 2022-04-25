@@ -1,4 +1,7 @@
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.util.*
+import kotlin.collections.ArrayList
 
 class Student() {
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
@@ -6,27 +9,42 @@ class Student() {
 
     // properties student berisikan :
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
-    val Sid: Int = 5
     // Nama bertipe String, Contoh : Joko Tarbiah
-    val Sname: String = "Joko Tarbiah"
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
-    val Sbirth: String = "10 Agustus 2019"
-    // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
-    fun changeFormatDate(Sbirth: String): String {
-        val dateFormat = SimpleDateFormat("dd-MM-yyyy")
+    var Sid: Int
+    var Sname: String
+    var Snphone: String
+    var Sbirth: String
+
+    init {
+        Sid = 0
+        Sname = ""
+        Sbirth = ""
+        Snphone = ""
+    }
+
+    constructor(Sid: Int, Sname: String, Sbirth: String, Snphone: String) : this() {
+        this.Sid = Sid
+        this.Sname = Sname
+        this.Sbirth = Sbirth
+        this.Snphone = Snphone
+    }
+
+
+    // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy dari input 10 Agustus 2019
+    fun formatTgl(Sbirth: String): String {
+        val dateFormat = SimpleDateFormat("dd MMMM yyyy", Locale("in", "ID"))
         val dateParse = dateFormat.parse(Sbirth)
         val dateFormatFinal = SimpleDateFormat("dd-MM-yyyy")
         return dateFormatFinal.format(dateParse)
     }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
-    val Sphone: String = "081212121212"
-    fun createPhoneNumber(Sphone: String): String {
-        if (Sphone.length < 11 || Sphone.length > 12) {
-            return "Nomor Handphone Tidak Valid"
-        }
-        return Sphone
+    fun getStudentNPhone(Snphone: String){
+        if (Snphone.length < 11 || Snphone.length > 12) "Nomor Telepon Tidak Valid"
+        else Snphone
     }
+
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
@@ -47,8 +65,18 @@ class Student() {
     * NIM nya menjadi : 5JT10082019
     * */
     fun formatNim(Sid: Int, Sname: String, Sbirth: String): String {
-        val nim = "$Sid${Sname[0]}${Sbirth.substring(Sbirth.length - 4)}"
-        return nim
+        val birth = formatTgl(Sbirth)
+        val format = birth.replace("-".toRegex(), "")
+        val length = Sname.length - 1
+        val str = Sname.split("")
+        var singkat = ""
+        for (i in 0..length) {
+            if (str[i] == " "){
+                singkat += str[1]
+                singkat += str[i+1]
+            }
+        }
+        return "$Sid$singkat$format"
     }
 
     /*
