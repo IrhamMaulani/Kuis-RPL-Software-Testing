@@ -35,8 +35,9 @@ class Student {
     /*
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
     
+  //JAWABAN///
     
-    import java.text.SimpleDateFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 class Student(var nama1: String, var nama2: String, id : Int,var format: String, var tanggal: String, private var nomor: String) {
