@@ -46,7 +46,7 @@ class Student {
     *  Orang tua bertipe  Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
-    var orangTua: Map<String, String> = mapOf("ayah" to "Muhammad Majedi", "ibu" to "Aulia Nor Saputri")
+    var orangTua: Map<String, String> = mapOf("ayah" to "Budi", "ibu" to "Siti")
 
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
