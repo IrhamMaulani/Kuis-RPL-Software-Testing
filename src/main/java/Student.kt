@@ -68,7 +68,7 @@ class Student {
         }
 
     fun formatNim(id: Int, nama: String, tglLhr: String): String {
-        var tgl: String = formatTanggal(tglLhr)
+        val tgl: String = formatTanggal(tglLhr)
         val format = tgl.replace("-", "")
         val pnjng = nama.length - 1
         val strArray = nama.split("")
