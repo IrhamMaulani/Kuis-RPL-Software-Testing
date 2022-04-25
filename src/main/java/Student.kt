@@ -54,7 +54,7 @@ class Student {
         if(no.length == 11 || no.length == 12){
             return no
         } else {
-            return "kd sesuai oi"
+            return "Harus 11 atau 12 tidak boleh kurang atau lebih"
         }
     }
 
@@ -63,6 +63,9 @@ class Student {
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
+    class orangTua(val ayah: String, val ibu: String){
+
+    }
 
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
