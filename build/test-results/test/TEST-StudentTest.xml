@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="StudentTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-04-25T12:27:37" hostname="DESKTOP-V019BVR" time="0.086">
+  <properties/>
+  <testcase name="getNim()" classname="StudentTest" time="0.039"/>
+  <testcase name="convertDate()" classname="StudentTest" time="0.026"/>
+  <testcase name="setNim()" classname="StudentTest" time="0.002"/>
+  <testcase name="getHobi()" classname="StudentTest" time="0.001"/>
+  <testcase name="getNoHp()" classname="StudentTest" time="0.002"/>
+  <testcase name="getOrtu()" classname="StudentTest" time="0.002"/>
+  <testcase name="generateNIM()" classname="StudentTest" time="0.001"/>
+  <testcase name="setHobi()" classname="StudentTest" time="0.001"/>
+  <testcase name="setNoHp()" classname="StudentTest" time="0.001"/>
+  <testcase name="setOrtu()" classname="StudentTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
