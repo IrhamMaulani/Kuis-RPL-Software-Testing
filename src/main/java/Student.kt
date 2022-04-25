@@ -37,16 +37,13 @@ class Student {
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
-    var Ortu = OrangTua("","")
-    class OrangTua(var ayah : String, var ibu : String) {
-
-    }
+    var Ortu: Map<String, String> = mapOf("ayah" to "Stephen Sambura", "ibu" to "Stephani Sambruang")
 
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
-    var hobi : Array<String> = arrayOf("Bersepeda","Bernyanyi","Makan")
+    var hobi: Array<String> = arrayOf("Travelling","Nonton Film","Olahraga")
 
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
@@ -55,6 +52,10 @@ class Student {
     * Tanggal Lahir : 10 Agustus 2019.
     * NIM nya menjadi : 5JT10082019
     * */
+    fun generateNIM(id: Int, nama: String, tanggalLahir: String): String {
+        val nim: String = ""
+        return nim
+    }
 
 
     /*
@@ -67,4 +68,6 @@ fun main() {
     val student = Student()
 
     println(student.convertDate("15 Maret 2002"))
+    println(student.Ortu)
+    println(student.hobi[0])
 }
