@@ -20,8 +20,12 @@ banyaknya testing secara otomatisasi dilakukan testing secara manual perlu dilak
 
 Jawab
 No.1
-Menurut saya, Testing pada perangkat lunak tidak wajib, karena pengujian bisa dilakukan pada tahap testingnya oleh system testing,
-namun kemapuan pembuatan testing oleh software development akan minadi nilai tambahan di dalam persaingan dunia kerja. 
-
-
+Menurut saya, Testing pada perangkat lunak tidak wajib namun sebaiknya ada, karena pengujian bisa dilakukan pada tahap testingnya oleh System Testing.
+namun, jika terjadi kesalahan di dalam baris kode yang sangat kompleks, programmer mudah untuk mencari letak kesalahn semantiknya.
+selain itu, kemampuan pembuatan testing oleh software development akan menjadi tambahan di dalam persaingan dunia kerja. 
+No.2
+Menurut Saya, jika tidak melakukan unit testing dan integration testing akan membuat kita tidak dapat memastikan kode berjalan sebagaimana mestinya,
+pengujian yang akan dilakukan disetiap unit kecil di dalam kode yang terdiri dari sangat banyak file kode dan semua integrasi antar file kode akan mempermudah kita 
+untuk mencari setiap kesalahan yang tidak terlihat dari file-file kode di dalam suatu projek besar. jika tidak dilakukan maka akan sangat sulit mencari kesalahan setiap
+unit yang ada karena banyaknya kode yang dibuat
  */
