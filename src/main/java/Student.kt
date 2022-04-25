@@ -13,11 +13,28 @@ class Student {
     lateinit var namaIbu: String // Orang tua bertipe Object yang berisi String
     lateinit var NIM: String // NIM yang memiliki tipe data String
     
-    fun getFullIdentification()
-    
+   constructor(id: Int, nama: String, tglLahir: String, noHp: String): this(){
+        this.id = id
+        this.nama = nama
+        this.tglLahir = tglLahir
+        this.noHp = noHp
+    }
+
+    init {
+        this.id = 0
+        this.nama = ""
+        this.tglLahir = ""
+        this.noHp = ""
+    }
+
+    fun getFullIdentification(): List<String> = listOf("$id", nama, tglLahir, noHp)
+
     //Mengubah menjadi format dd-mm-yyyy
-    fun formatTanggal() {
-        
+    fun formatTanggal(tanggal: String): String {
+        val pengubah = DateTimeFormatter.ofPattern("dd MMMM yyyy", indonesia)
+        val tanggal = LocalDate.parse(tanggal, pengubah)
+        val keluaran = tanggal.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
+        return (keluaran)
     }
     
     // Fungsi Nomor Hp
