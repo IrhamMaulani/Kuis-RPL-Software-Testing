@@ -17,7 +17,7 @@ internal class StudentTest {
     @Test
     fun testFullIdentificationSuccess() {
         val student = Student(5, "Joko Tarbiah", "10 Agustus 2019", "085312345678")
-        assertEquals("5 Joko Tarbiah 10 Agustus 2019 085312345678", student.getFullIdentification(), "Tidak Sesuai")
+        assertEquals(listOf("5", "Joko Tarbiah", "10 Agustus 2019", "085312345678"), student.getFullIdentification())
     }
 
     @Test
@@ -29,13 +29,13 @@ internal class StudentTest {
     @Test
     fun testGetNomorHPError(){
         val noHp = student.getNomorHp("0853")
-        assertEquals("Digit nomor HP tidak memenuhi syarat (11 - 12)", noHp)
+        assertEquals("Syarat nomor yaitu 11 dan 12 angka", noHp)
     }
 
     @Test
     fun testGetNomorHPFailed(){
         val noHp = student.getNomorHp("0853")
-        assertEquals(noHp,"Digit nomor HP tidak memenuhi syarat (11 - 12)")
+        assertEquals(noHp,"Syarat nomor yaitu 11 dan 12 angka")
     }
 
     @Test
@@ -54,7 +54,7 @@ internal class StudentTest {
     fun testTanggalLahir(){
         val tanggal = "10 Agustus 2019"
 
-        val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale("in", "ID"))
+        val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale("in", "ID"))
         val date = LocalDate.parse(tanggal, formatter)
         val expectation = date.format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale("in", "ID")))
 
@@ -65,7 +65,7 @@ internal class StudentTest {
     fun testFormatTanggal(){
         val tanggal = "10 Agustus 2019"
 
-        val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale("in", "ID"))
+        val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale("in", "ID"))
         val date = LocalDate.parse(tanggal, formatter)
         val expectation = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
 

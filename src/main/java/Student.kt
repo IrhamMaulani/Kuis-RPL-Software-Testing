@@ -1,7 +1,6 @@
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
-import javax.swing.UIManager.get
 import kotlin.collections.ArrayList
 
 class Student() {
@@ -29,7 +28,7 @@ class Student() {
         this.nomorHp = ""
     }
 
-    fun getFullIdentification(): String = "$id $nama $tanggalLahir $nomorHp"
+    fun getFullIdentification(): List<String> = listOf("$id", nama, tanggalLahir, nomorHp)
 
     //Fungsi ubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy
     fun formatTanggal(tanggal: String): String {
