@@ -2,7 +2,7 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
-class Student {
+class Student() {
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
 
@@ -17,12 +17,12 @@ class Student {
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
     var tanggalLahir : String = ""
 
-    constructor(id: Int, nama: String, tanggalLahir: String, noHp: String){
-        this.id = id
-        this.nama = nama
-        this.tanggalLahir = tanggalLahir
-        this.noHp = noHp
-    }
+//    constructor(id: Int, nama: String, tanggalLahir: String, noHp: String){
+//        this.id = id
+//        this.nama = nama
+//        this.tanggalLahir = tanggalLahir
+//        this.noHp = noHp
+//    }
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
     fun date(tanggalLahir:String) : String{
@@ -32,18 +32,18 @@ class Student {
     }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
-    var noHp : String =""
-        get() {
-            if (noHp.length < 11 || noHp.length > 12) return "Phone Number Is Not Valid"
-            else return noHp
-        }
+//    var noHp : String =""
+//        get() {
+//            if (noHp.length < 11 || noHp.length > 12) return "Phone Number Is Not Valid"
+//            else return noHp
+//        }
 
-    init {
-        this.id = 0
-        this.nama = ""
-        this.tanggalLahir = ""
-        this.noHp = ""
-    }
+//    init {
+//        this.id = 0
+//        this.nama = ""
+//        this.tanggalLahir = ""
+//        this.noHp = ""
+//    }
 
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
@@ -67,21 +67,27 @@ class Student {
     * Tanggal Lahir : 10 Agustus 2019.
     * NIM nya menjadi : 5JT10082019
     * */
-    var nim: String = generateNIM(id,nama, tanggalLahir)
-    fun generateNIM(id: Int, nama: String, tanggalLahir: String): String{
-        val inisial: String = nama
-            .trim()
-            .split(" ")
-            .mapNotNull { it.firstOrNull()?.toString() }
-            .reduce { acc, s -> acc + s }
-            .uppercase()
-        var tgl: String = date(tanggalLahir)
-        tgl = tgl.replace("-","")
-        return "${id.toString()}${inisial}${tgl}"
-    }
+//    var nim: String = generateNIM(id,nama, tanggalLahir)
+//    fun generateNIM(id: Int, nama: String, tanggalLahir: String): String{
+//        val inisial: String = nama
+//            .trim()
+//            .split(" ")
+//            .mapNotNull { it.firstOrNull()?.toString() }
+//            .reduce { acc, s -> acc + s }
+//            .uppercase()
+//        var tgl: String = date(tanggalLahir)
+//        tgl = tgl.replace("-","")
+//        return "${id.toString()}${inisial}${tgl}"
+//    }
 
     /*
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
     * */
-    
+
+}
+
+fun main() {
+    var student = Student()
+
+    student.date("10 November 2002")
 }
