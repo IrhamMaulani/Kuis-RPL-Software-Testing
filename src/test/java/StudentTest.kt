@@ -6,7 +6,13 @@ import java.util.*
 
 internal class StudentTest {
     private lateinit var student: Student
-
+    
+    @Test
+    fun testFullIdentificationSuccess() {
+        val student = Student(5, "Joko Tarbiah", "10 Agustus 2019", "085312345678")
+        assertEquals(listOf("5", "Joko Tarbiah", "10 Agustus 2019", "085312345678"), student.getFullIdentification())
+    }
+    
     @Test
     fun testSetPhoneNumberSuccess(){
         val noHp = student.setPhoneNum("085312345678")
