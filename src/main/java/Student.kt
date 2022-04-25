@@ -1,3 +1,6 @@
+import java.time.format.DateTimeFormatter
+import java.util.*
+
 class Student {
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
@@ -5,14 +8,24 @@ class Student {
     // properties student berisikan :
 
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
+    var id: Int = 0
 
     // Nama bertipe String, Contoh : Joko Tarbiah
+    var name: String = ""
 
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
+    var birthDate: String = ""
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
+    fun dateFormatter(date: String): String {
+        // var date = birthDate
+        var formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
+        var formatted = date.format(formatter)
+        return formatted
+    }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
+    var phone: String = "" //masi bingung
 
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
@@ -35,4 +48,12 @@ class Student {
     /*
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
     * */
+}
+
+fun main() {
+    val student = Student()
+
+    student.birthDate = "10 November 2002"
+    print(student.dateFormatter(student.birthDate))
+
 }
