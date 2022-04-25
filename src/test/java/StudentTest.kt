@@ -27,4 +27,31 @@ internal class StudentTest {
         val noHp = student.getNomorHp("0821")
         assertEquals(noHp,"Nomor tidak valid")
     }
+    
+    
+    @Test
+    fun testOrangtuaSucces() {
+        val ortu = Student.ortu()
+        val (ayah,ibu) = ortu.menampilkanortu()
+        assertEquals(Pair(ayah,ibu),ortu.menampilkanortu())
+    }
+
+    @Test
+    fun testSetHobiSuccess(){
+        val hobi = listOf("Bersepeda", "Bermain", "Menyanyi")
+        assertEquals("[Bersepeda, Bermain, Menyanyi]", student.hobi(hobi).toString())
+    }
+
+    @Test
+    fun testNIMSuccess(){
+        val data = student.NIM(2, "Ahmad Fulan", "10 Agustus 2019")
+        assertEquals("2AF10082019", data)
+    }
+
+    @Test
+    fun testStudentArrayList() {
+        val student = Student(2, "Ahmad Fulan", "10 Agustus 2019", "082112341234")
+        assertEquals(student.getStudentArrayList, arrayListOf(student))
+    }
+
 }
