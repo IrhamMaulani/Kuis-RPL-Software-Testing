@@ -33,6 +33,6 @@ class StudentTest {
 
     @Test
     fun testNoHP(){
-        assertEquals("08135792468",student.Snphone)
+        assertEquals("08135792468", student.Snphone)
     }
 }
