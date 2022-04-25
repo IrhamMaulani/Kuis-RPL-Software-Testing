@@ -1,13 +1,16 @@
+
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 internal class StudentTest {
     private lateinit var student: Student
+    private lateinit var parent: Student.Parent
 
     @BeforeEach
     fun beforeEach() {
         student = Student(5, "Toko Tarbiah", "10 Maret 2019", "08932123322")
+        parent = Student.Parent("Nama Bapak", "Nama Ibu")
     }
 
     @Test
@@ -47,5 +50,12 @@ internal class StudentTest {
 
     @Test
     fun hobbies() {
+
+    }
+
+    @Test
+    fun parent(){
+        val expected = "Nama Bapak, Nama Ibu"
+        assertEquals(expected, parent.show())
     }
 }

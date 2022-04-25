@@ -9,17 +9,14 @@ import java.util.*
 // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
 // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
 
-class Student(id: Int, name: String, private var birthday: String, phoneNumber: String){
-    private var id: Int = 0
+class Student(private var id: Int, private var name: String, private var birthday: String,
+              private var phoneNumber: String){
         fun setId(id: Int){this.id = id}
         fun getId() = this.id
-    private var name: String = ""
         fun setName(name: String){this.name = name}
         fun getName() = this.name
         fun setBirthday(birthday: String){this.birthday = birthday}
-    private var phoneNumber: String = ""
         fun setPhoneNumber(phoneNumber: String){this.phoneNumber = phoneNumber}
-
 /*
     constructor(id: Int, name: String, birthday: String, phoneNumber: String) : this(){
         this.id = id
@@ -48,10 +45,14 @@ class Student(id: Int, name: String, private var birthday: String, phoneNumber: 
     //  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     //  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
 
-    var parent = object {
-        var ayah = ""
-        var ibu = ""
-        override fun toString() = "Ayah : $ayah, Ibu : $ibu"
+    class Parent(private var ayah: String, private var ibu: String){
+        fun setAyah(ayah: String){this.ayah = ayah}
+        fun getAyah() = this.ayah
+        fun setIbu(ibu: String){this.ibu = ibu}
+        fun getIbu() = this.ibu
+        fun show (): String {
+            return("${getAyah()}, ${getIbu()}")
+        }
     }
     /*NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
     dan merupakan kode yang berupa gabungan ID, huruf pertama dan akhir dari nama student,
