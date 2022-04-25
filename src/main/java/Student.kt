@@ -38,13 +38,18 @@ class Student {
     }
     
     // Fungsi Nomor Hp
-    fun getNomorHp() {
-        
+    fun getNomorHp(no: String): String {
+        if(no.length == 11 || no.length == 12){
+            return no
+        } else {
+            return "Nomor tidak valid"
+        }
     }
     
     // Fungsi Hobi
-    fun hobi() {
-        
+    fun hobi(array: List<String>): List<String> {
+        val hobi = array.toList()
+        return hobi
     }
     
     // Fungsi NIM
