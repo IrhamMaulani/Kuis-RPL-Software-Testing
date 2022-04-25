@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -10,28 +9,31 @@ internal class StudentTest {
     @BeforeEach
     fun beforeEach() {
         student = Student()
+        student.id  = 6
+        student.nama = "Albert Sanjaya"
+        student.tanggal = "23 April 2001"
+        student.nomorHp = "085347205189"
+        student.nimId = student.getNim()
     }
-
     @Test
-    fun testDateFormat() {
-        assertEquals("23-04-2022", student.dateFormat())
+    fun testgetdate() {
+        assertEquals("23-04-2001", student.dateFormat())
     }
-
     @Test
     fun testgetNim() {
-        assertEquals("6JT23042022", student.getNim())
+        assertEquals("6AS23042001", student.getNim())
     }
     @Test
     fun testnohp() {
-        assertEquals("086753102945", student.noHp("086753102945"))
+        assertEquals("085347205189", student.nomorHp)
     }
     @Test
     fun testayah() {
-        assertEquals("stephen Sambura", student.Orangtua.ayah)
+        assertEquals("stephen Kurniawan", student.Orangtua.ayah)
     }
     @Test
     fun testibu() {
-        assertEquals("Stephani Sambruang", student.Orangtua.ibu)
+        assertEquals("Stephani Kurniawati", student.Orangtua.ibu)
     }
     @Test
     fun testhobi() {
