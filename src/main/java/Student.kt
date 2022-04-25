@@ -10,15 +10,25 @@ class Student {
 
     // properties student berisikan :
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
-    var id: Int = 5
+    var id: Int = 0
+        get() = field
+        set(value) {
+            field = value
+        }
 
     // Nama bertipe String, Contoh : Joko Tarbiah
-    var nama: String = "Muhammad Fulan"
-    // var nama: String
+    var nama: String = ""
+        get() = field
+        set(value) {
+            field = value
+        }
 
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
-    var tglLhr: String = "29 Februari 2020"
-    //var tglLhr: String
+    var tglLhr: String = ""
+        get() = field
+        set(value) {
+            field = value
+        }
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
     fun formatTanggal(tglLhr: String): String {
@@ -29,13 +39,12 @@ class Student {
     }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
-    var noHp: String =  "088245411080"
-    fun formatNoHp(noHp: String): String {
-        if (noHp.length < 11 || noHp.length > 12) {
-            return "Nomor Handphone Tidak Valid"
+    var noHP: String = ""
+        get() = field
+        set(value) {
+            if (value.length<11||value.length>12) field = "No Hp Tidak Valid"
+            else field = value
         }
-        return noHp
-    }
 
     /*
     *  Orang tua bertipe  Object yang berisi String nama kedua orang tua.
@@ -56,8 +65,14 @@ class Student {
     * Tanggal Lahir : 10 Agustus 2019.
     * NIM nya menjadi : 5JT10082019
     * */
+    var nim: String = ""
+        get() = field
+        set(value) {
+            field = formatNim(id, nama, tglLhr)
+        }
+
     fun formatNim(id: Int, nama: String, tglLhr: String): String {
-        val format = tglLhr.replace("-".toRegex(), "")
+        val format = tglLhr.replace("-", "")
         val inputLength = nama.length - 1
         val strArray = nama.split("")
         var singkatan = ""
@@ -79,5 +94,4 @@ class Student {
         listStudent.add(Student())
         return listStudent
     }
-    // var id: Int
 }
