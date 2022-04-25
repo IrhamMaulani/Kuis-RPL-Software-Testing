@@ -22,25 +22,6 @@ class Student {
     var dateformat = DateFormatSymbols(id)
     var nohp: String = "081234567891"
 
-    //Member functions of class to set student name
-    fun setStudentName(nama:String){
-        this.nama=nama
-    }
-
-    //Member functions of class to set student age
-    fun setStudentAge(tlahir:String){
-        this.tlahir=tlahir
-    }
-    fun setStudentId(id:Int){
-        this.studentid=studentid
-    }
-
-
-    //Member functions of class to return student details
-    fun getStudentDetails():String{
-        return "Name :  $nama, Age : $tlahir"
-    }
-
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
     fun tanggal(): String? {
         val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", id)
@@ -53,8 +34,8 @@ class Student {
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
     fun Phonenum(): String {
         if(nohp.length == 11||nohp.length == 12) {
-            var Nomor = nohp
-            return Nomor;
+            val Nomor = nohp
+            return Nomor
         }
         else {
             return "Panjang nomor tidak sesuai"
@@ -67,12 +48,12 @@ class Student {
     */
     class Orangtua() {
 
-        var ayah: String = "Stephen Sambura" ;
-        var ibu: String = "Stephani Sambruang";
-        fun displayortu() {
+        var ayah: String = "Stephen Sambura"
+        var ibu: String = "Stephani Sambruang"
+        fun displayortu(): Pair<String,String>{
             println("Ayah : $ayah")
             println("Ibu : $ibu")
-
+            return Pair(ayah,ibu)
         }
     }
 
@@ -81,7 +62,7 @@ class Student {
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
 
-    fun arrayhobi() {
+    fun arrayhobi(): String {
         val Hobi: Array<String> = arrayOf("Bersepeda ", "Bernyanyi ", "Makan ")
 
         val sb = StringBuilder()
@@ -90,6 +71,7 @@ class Student {
         }
         val c = sb.toString().substring(0, sb.length-2)
         println(c)
+        return c
     }
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
@@ -100,12 +82,12 @@ class Student {
     * */
 
     fun genNIM(): String {
-        var inisial: String = nama.trim().split(" ").map{it.first()}.joinToString("").uppercase()
+        val inisial: String = nama.trim().split(" ").map{it.first()}.joinToString("").uppercase()
         val tlahir = tanggal()
         val tgl = tlahir?.replace("-","")
         /*pake hasil dibagian baris 40 biar udh ke reformat*/
 
-        return "${studentid}$inisial$tgl";
+        return "${studentid}$inisial$tgl"
     }
 }
 
