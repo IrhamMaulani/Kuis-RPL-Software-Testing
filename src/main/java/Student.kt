@@ -42,6 +42,7 @@ class Student() {
         if(nohp.length == 11|| nohp.length == 12) {
             var Nomor = nohp
             return Nomor;
+
         }
         else {
             return "Panjang nomor tidak sesuai"
@@ -54,12 +55,12 @@ class Student() {
     */
     class Orangtua() {
 
-        var ayah: String = "Stephen Sambura" ;
-        var ibu: String = "Stephani Sambruang";
-        fun displayortu() {
+        var ayah: String = "Stephen Sambura"
+        var ibu: String = "Stephani Sambruang"
+        fun displayortu(): Pair<String,String>{
             println("Ayah : $ayah")
             println("Ibu : $ibu")
-
+            return Pair(ayah,ibu)
         }
     }
 
@@ -68,7 +69,7 @@ class Student() {
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
 
-    fun arrayhobi() {
+    fun arrayhobi(): String {
         val Hobi: Array<String> = arrayOf("Bersepeda ", "Bernyanyi ", "Makan ")
 
         val sb = StringBuilder()
@@ -77,6 +78,7 @@ class Student() {
         }
         val c = sb.toString().substring(0, sb.length-2)
         println(c)
+        return c
     }
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
@@ -87,12 +89,14 @@ class Student() {
     * */
 
     fun genNIM(): String {
-        var inisial: String = nama.trim().split(" ").map{it.first()}.joinToString("").uppercase()
+        val inisial: String = nama.trim().split(" ").map{it.first()}.joinToString("").uppercase()
         val tlahir = tanggal()
         val tgl = tlahir?.replace("-","")
         /*pake hasil dibagian baris 40 biar udh ke reformat*/
+
         val nim = "$studentid$inisial$tgl"
         return "$studentid$inisial$tgl";
+
     }
 
     /*
