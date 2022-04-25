@@ -1,5 +1,3 @@
-import java.util.*
-
 fun main(args: Array<String>) {
     var student:Student = Student()
     println("ID: ${student.studentid}")
