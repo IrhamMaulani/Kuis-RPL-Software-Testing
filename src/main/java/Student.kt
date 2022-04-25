@@ -49,6 +49,8 @@ class Student {
         else phoneNum
     }
     public fun getPhoneNum() = this.phoneNum
+    
+    fun getFullIdentification(): List<String> = listOf("$id", nama, tanggalLahir, nomorHp)
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
