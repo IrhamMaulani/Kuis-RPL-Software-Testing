@@ -34,5 +34,55 @@ class Student {
 
     /*
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
+    
+    
+    import java.text.SimpleDateFormat
+import java.util.*
+
+class Student(var nama1: String, var nama2: String, id : Int,var format: String, var tanggal: String, private var nomor: String) {
+    var formatted = " "
+    var iD = id
+    var hobi = arrayOf<String>(" ")
+    fun setPhoneNumber(nomor: String ) {
+        this.nomor = if(nomor.length < 11 || nomor.length > 12)" Nomor telpon melebih kapasitas"
+        else nomor
+    }
+    fun setPhoneNumber() = this.nomor
+    val sdf  = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+
+    fun Konvert(){
+        val parseDate = sdf.parse(tanggal)
+        formatted =SimpleDateFormat(format).format(parseDate)
+    }
+    val pertama = nama1.first()
+    val kedua =  nama2.first()
+    fun Detail(){
+        val detail =""" Nama: $nama1$nama2
+                        Id: $iD
+                        Tanggal Lahir: $tanggal
+                        Nomor: $nomor
+                        NIM: $iD$pertama$kedua${Konvert()}
+                        """
+        print(detail)
+    }
+
+    fun Hobi(): Array<String> {
+        return hobi
+    }
+
+
+}
+class Ortu(var ayah : String, var ibu: String) {
+    var nAyah = ayah
+    var nIbu = ibu
+
+    fun Detail1(){
+        val detail1 ="""Nama: $nAyah
+                        Nama: $nIbu"""
+
+        print(detail1)
+    }
+}
+
     * */
 }
