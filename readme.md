@@ -22,7 +22,7 @@ Referensi :
 
 - https://kotlinlang.org/docs/jvm-test-using-junit.html
 - https://github.com/mockito/mockito-kotlin
-
+ 
 # Kuis 2 (80)
 Buatlah fungsi dan buatlah test pada class student sesuai petunjuk pada file class.
 
