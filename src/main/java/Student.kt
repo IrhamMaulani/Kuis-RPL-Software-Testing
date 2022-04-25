@@ -1,13 +1,9 @@
-
-import java.lang.Character.isUpperCase
 import java.text.SimpleDateFormat
 import java.util.*
-
 
 class Student {
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
-
     // properties student berisikan :
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
     var id: Int = 0
@@ -68,22 +64,22 @@ class Student {
     var nim: String = ""
         get() = field
         set(value) {
-            field = formatNim(id, nama, tglLhr)
+            field = formatNim(this.id, this.nama, this.tglLhr)
         }
 
     fun formatNim(id: Int, nama: String, tglLhr: String): String {
-        val format = tglLhr.replace("-", "")
-        val inputLength = nama.length - 1
+        var tgl: String = formatTanggal(tglLhr)
+        val format = tgl.replace("-", "")
+        val pnjng = nama.length - 1
         val strArray = nama.split("")
         var singkatan = ""
-        for(i in 0..inputLength){
+        for(i in 0..pnjng){
             if (strArray[i]==" "){
                 singkatan += strArray[1]
                 singkatan += strArray[i+1]
             }
         }
-        val nim = "$id$singkatan$format"
-        return nim
+        return "$id$singkatan$format"
     }
 
     /*
