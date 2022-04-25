@@ -28,7 +28,7 @@ internal class StudentControllerTest {
             2,"Ahmad Fulan","10 Agustus 2019"))
     }
     
-     @Test
+    @Test
     fun getHobiSuccess(){
         val hobi = listOf("Bersepeda", "Menyanyi")
         assertEquals("Bersepeda, Menyanyi", studentController.getHobi(hobi))
