@@ -9,6 +9,9 @@ internal class StudentTest {
     @BeforeEach
     fun beforeEach() {
         student = Student()
+        student.nama = "Laily Zida"
+        student.noHp = "08xxxxxxxxx"
+        student.id = 3
         student.tanggalLahir = "15 Maret 2002"
     }
 
