@@ -26,6 +26,16 @@ internal class StudentTest {
     }
 
     @Test
+    fun testGetNomorHPError(){
+        assertEquals("Digit nomor HP tidak memenuhi syarat (11 - 12)", student.getNomorHp("08532"))
+    }
+
+    @Test
+    fun testGetNomorHPFailed(){
+        assertEquals(student.getNomorHp("08532"),"Digit nomor HP tidak memenuhi syarat (11 - 12)")
+    }
+
+    @Test
     fun testGetOrangTuaSuccess(){
         assertEquals("ayah: Stephen Sambura ibu: Stephani Sambruang",
             student.orangTua("Stephen Sambura", "Stephani Sambruang"))
