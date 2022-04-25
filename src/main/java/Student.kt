@@ -3,7 +3,7 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Student {
+class Student() {
     
     var indonesia = Locale("in", "ID") // Format tanggal lahir menjadi standar tanggal
     var id: Int // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat
