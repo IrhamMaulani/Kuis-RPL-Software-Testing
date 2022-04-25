@@ -9,13 +9,13 @@ class Student {
     // properties student berisikan :
 
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
-    var id : Int = 0
+    var id : Int
 
     // Nama bertipe String, Contoh : Joko Tarbiah
-    var nama : String = ""
+    var nama : String
 
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
-    var tanggalLahir : String = ""
+    var tanggalLahir : String
 
     constructor(id: Int, nama: String, tanggalLahir: String, noHp: String){
         this.id = id
@@ -32,7 +32,7 @@ class Student {
     }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
-    var noHp : String =""
+    var noHp : String
         get() {
             if (noHp.length < 11 || noHp.length > 12) return "Phone Number Is Not Valid"
             else return noHp
