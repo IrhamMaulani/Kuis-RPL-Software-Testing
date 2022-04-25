@@ -24,4 +24,11 @@ class StudentTest {
     fun testNim(){
         assertEquals("69MF29022020", student.formatNim(student.id, student.nama, student.tglLhr))
     }
+
+    @Test
+    fun testNoHpFail(){
+        student.noHP = "0813579246"
+        assertEquals("No Hp Tidak Valid",student.noHP)
+        assertNotEquals("0813579246",student.noHP)
+    }
 }
