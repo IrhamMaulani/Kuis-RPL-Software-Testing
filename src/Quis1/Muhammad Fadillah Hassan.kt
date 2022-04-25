@@ -22,7 +22,11 @@ No 3.
 Berikan pendapat kalian tentang pekerjaan QA Engineer sedangkan disisi lain Software Engineer
 telah melakukan testing
 :::
-aaa
+Dari sumber yang saya dapatkan yaitu https://www.ekrut.com/media/8-skill-ini-kamu-butuhkan-untuk-menjadi-qa-engineer-handal
+Disitu menyatakan bahwa pekerjaan QA Engineer tidak hanya testing, jadi menurut saya QA Engineer juga menjadi penganalisis
+sebuah testing yang dilakukan software engineer tadi dan akan melaporkannya ke QA Manager, QA Engineer juga bisa melakukan
+test ulang untuk menjaga jaga agar tidak ada bug, walaupun test sudah dilakukan oleh software engineer tetapi mungkin saja
+masih ada unit atau hal yang masih error.
 
 No 4.
 Terdapat banyak test pada perangkat lunak, mulai dari test business logic,
@@ -30,9 +34,21 @@ UI, UX, Performa, sampai keamanan. Namun tidak semuanya dapat dilakukan karena
 keterbatasan waktu dan mahalnya biaya yang harus dikeluarkan. Berikan pendapat
 kalian dampak apa yang terjadi jika pengujian diatas tidak diberikan pada perangkat lunak
 ::::
+Dari web https://se.ittelkom-pwt.ac.id/2019/02/20/software-testing-dalam-lingkup-software-engineering/
+menyatakan bahwa salah satu tujuan dari testing adalah agar pengguna atau client dapat menerima ataupun menolak perangkat lunak yang sudah dilakukan test.
+Jadi perangkat lunak yang tidak melalui tahap testing akan selalu ditolak oleh client, salah satu contohnya pada UI dan UX, di UI/UX
+jika tidak ada tahap pengujian, kita tidak tau apakah desain dari UI/UX tersebut sudah seperti yang client inginkan, walaupun testing
+memakan banyak biaya dan waktu, testing juga tetap harus dilakukan untuk kesempurnaan perangkat lunak.
 
 No 5.
 Berikan pendapat kalian tentang testing perangkat lunak secara manual? Apakah di saat
 banyaknya testing secara otomatisasi dilakukan testing secara manual perlu dilakukan?
 :::::
+Web https://socs.binus.ac.id/2020/06/30/software-testing/ menyatakan bahwa pengujian manual itu tidaklah memakai tools atau alat lainnya dalam pengujian.
+Jadi pengujian ini bisa saja masih dilakukan walaupun sekarang sudah banyak pengujian secara otomatis.
+Kemudian dari web https://dtc.co.id/blog/mengenal-profesi-software-tester-perannya-dalam-pengembangan-aplikasi, disitu menyatakan bahwa
+Salah satu kelebihan manual testing adalah penghematan biaya, jadi menurut saya ini benar akan tetapi manual testing juga memiliki kekurangan
+yaitu waktu yang agak lebih lama dari testing otomatis menggunakan tools, akan tetapi juga, manual testing ini biasanya yaitu pengujian yang
+dikehendaki oleh user dan client agar mereka lebih suka atau bisa merevisi yang telah di uji.
+
  */
