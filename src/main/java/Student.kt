@@ -74,23 +74,6 @@ class Student(id: Int, name: String, private var birthday: String, phoneNumber: 
         println(hobbies.contentToString())
     }
 }
-
-    /*
-
-
-
-
-} */
-
-
-    /*
-
-    */
-
-    /*
-
-    * */
-
     /*
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
     * */
