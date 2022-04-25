@@ -1,38 +1,57 @@
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
+
 class Student {
-    // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
-    // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
 
-    // properties student berisikan :
+    var id: Int = 0
+        get() = field
+        set(value) {
+            field = value
+        }
 
-    // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
+    var nama: String = ""
+        get() = field
+        set(value) {
+            field = value
+        }
 
-    // Nama bertipe String, Contoh : Joko Tarbiah
+    var tgl_lhr: String = ""
+        get() = field
+        set(value) {
+            field = value
+        }
 
-    // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
+    fun convertDate(tgl_Lhr: String): String {
+        val formatter = SimpleDateFormat("dd MMMM yyyy", Locale("in", "ID"))
+        val tgl = formatter.parse(tgl_lhr)
+        val formatted = SimpleDateFormat("dd-MM-yyyy")
+        return formatted.format(tgl)
+    }
 
-    // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
+    var noHP: String = ""
+        get() = field
+        set(value) {
+            if (value.length < 11 || value.length > 12) field = "No Hp Salah"
+            else field = value
+        }
 
-    // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
+    object ortu {
+        var ayah : String = "Cristiano Ronaldo"
+        var ibu : String = "Kimberly Rider"
+    }
 
-    /*
-    *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
-    *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
-    */
+    val hobi: mutableList<String> = listOf("Bersepeda", "Bernyanyi", "Makan", "Berenang", "Berlari", "Musik")
 
-    /*
-    * Hobi yang bertipe array atau list atau arraylist yang berisikan string
-    * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
-    * */
+    var nim: String = ""
+        get() {
+            field = formatNim(this.id, this.nama, this.tgl_lhr)
+            return field
+        }
 
-    /*
-    * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
-    * dan merupakan kode yang berupa gabungan ID, huruf pertama dan akhir dari nama student,
-    * dan tanggal lahir : Contoh ID=5, nama : Joko Tarbiah,
-    * Tanggal Lahir : 10 Agustus 2019.
-    * NIM nya menjadi : 5JT10082019
-    * */
-
-    /*
-    * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
-    * */
+    fun getList(): ArrayList<Student> {
+        val list.add(this)
+        return list
+    }
 }
