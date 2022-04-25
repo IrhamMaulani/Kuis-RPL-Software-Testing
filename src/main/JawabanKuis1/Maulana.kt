@@ -1,3 +1,4 @@
+class Maulana() {
 /*
     # Kuis-RPL-Software-Testing
 
@@ -87,3 +88,4 @@
     http://www.quadras.co.id/2016/03/18/manual-vs-automation-testing-tools-pilih-yang-mana/#:~:text=Pengujian%20manual%20atau%20manual%20testing,oleh%20tools%2C%20script%20dan%20software.
     https://qatros.com/blog/blog-technology-1/post/perbedaan-manual-testing-dan-automated-testing-27
 */
+}
