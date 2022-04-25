@@ -71,9 +71,9 @@ class Student(var nama1: String, var nama2: String, id : Int,var format: String,
     fun Hobi(): Array<String> {
         return hobi
     }
-
-
 }
+
+
 class Ortu(var ayah : String, var ibu: String) {
     var nAyah = ayah
     var nIbu = ibu
