@@ -27,13 +27,13 @@ class StudentTest {
 
     @Test
     fun testNoHP(){
-        assertEquals("0813579246",student.noHP)
+        assertEquals("08135792468",student.noHP)
     }
 
     @Test
     fun testNoHpFail(){
         student.noHP = "0813579246"
         assertEquals("No Hp Tidak Valid",student.noHP)
-        assertNotEquals("0813579246",student.noHP)
+        assertNotEquals("08135792468",student.noHP)
     }
 }
