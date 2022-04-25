@@ -52,7 +52,7 @@ class Student {
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
-    val hobi: List<String> = listOf("Main Game", "Mendengarkan Musik", "Membaca Komik", "Nonton Anime", "Nonton Vtuber 2D")
+    val hobi: List<String> = listOf("Main Game", "Mendengarkan Musik", "Membaca Komik", "Nonton Anime", "Nonton Vtuber")
 
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
@@ -70,7 +70,7 @@ class Student {
 
     fun formatNim(id: Int, nama: String, tglLhr: String): String {
         val tgl: String = formatTanggal(tglLhr)
-        val format = tgl.replace("-", "")
+        val ganti = tgl.replace("-", "")
         val pnjng = nama.length - 1
         val strArray = nama.split("")
         var singkatan = ""
@@ -80,7 +80,7 @@ class Student {
                 singkatan += strArray[i+1]
             }
         }
-        return "$id$singkatan$format"
+        return "$id$singkatan$ganti"
     }
 
     /*
