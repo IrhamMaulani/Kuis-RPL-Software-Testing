@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
@@ -8,20 +9,11 @@ class StudentTest {
     @BeforeEach
     fun beforeEach() {
         student = Student()
+        student.id = 69
+        student.nama = "Muhammad Fulan"
+        student.noHP = "08135792468"
+        student.tglLhr = "29 Februari 2020"
     }
 
-    @Test
-    fun testFormatNim() {
-        assertEquals("5JT10082019", student.formatNim(5, "Joko Tai", "10-08-2019"))
-    }
 
-    @Test
-    fun testing() {
-        assertEquals("10-08-2019", student.formatTanggal("10 Agustus 2019"))
-    }
-
-    @Test
-    fun Testnohp(){
-        assertEquals("123456789101", student.formatNoHp("12345678910"))
-    }
 }
