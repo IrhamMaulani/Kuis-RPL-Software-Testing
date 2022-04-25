@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="StudentTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-25T06:07:27" hostname="LAPTOP-G9J2RAVN" time="0.023">
+  <properties/>
+  <testcase name="testOrangtuaSucces()" classname="StudentTest" time="0.023"/>
+  <system-out><![CDATA[Ayah : Stephen Sambura
+Ibu : Stephani Sambruang
+Ayah : Stephen Sambura
+Ibu : Stephani Sambruang
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
