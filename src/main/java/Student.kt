@@ -3,9 +3,21 @@ import java.text.SimpleDateFormat
 
 class Student {
 
-    var id:Int = 6
-    var nama:String = "Joko Tingkir"
-    var tanggal:String = "23 April 2022"
+    var id:Int = 0
+        get() = field
+        set(value) {
+            field = value
+        }
+    var nama:String = ""
+        get() = field
+        set(value) {
+            field = value
+        }
+    var tanggal:String = ""
+        get() = field
+        set(value) {
+            field = value
+        }
 
     fun dateFormat(): String{
         val format1 = SimpleDateFormat("dd-MM-yyyy")
@@ -26,27 +38,23 @@ class Student {
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
 
-    fun noHp(Nomor :String = "086753102945" ): String {
-        if(Nomor.length == 11||Nomor.length == 12) {
-            var nomor = Nomor
-            return nomor
+    var nomorHp : String = ""
+        get() {
+            if (field.length == 11 || field.length == 12) return field
+            else return "No salah "
         }
-        return "No Salah"
-    }
-    val nomor = noHp()
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
 
     class orangTua (
         var ayah:String ,
         var ibu :String
     )
-    val Orangtua = orangTua("stephen Sambura","Stephani Sambruang")
-    
+    val Orangtua = orangTua("stephen Kurniawan","Stephani Kurniawati")
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
-   fun tampilhobi(): String{
+    fun tampilhobi(): String{
         val a = StringBuilder()
         val hobi: List<String> =
             listOf("Swimming", "Basketball", "Volleyball", "Cooking", "Running")
@@ -69,6 +77,12 @@ class Student {
         val inisial = nama.trim().splitToSequence(" ").take(2).map { println(it); it.first().uppercase()}.joinToString("")
         return "$id$inisial$tgl"
     }
+    var nimId : String = ""
+         get() = field
+         set(value) {
+             field = getNim()
+         }
+
 
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
