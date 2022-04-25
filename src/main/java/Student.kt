@@ -1,28 +1,53 @@
+
+import java.lang.Character.isUpperCase
+import java.text.SimpleDateFormat
+import java.util.*
+
+
 class Student {
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
 
     // properties student berisikan :
-
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
+    var id: Int = 5
 
     // Nama bertipe String, Contoh : Joko Tarbiah
+    var nama: String = "Muhammad Fulan"
+    // var nama: String
 
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
+    var tglLhr: String = "29 Februari 2020"
+    //var tglLhr: String
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
+    fun formatTanggal(tglLhr: String): String {
+        val dateFormat = SimpleDateFormat("dd MMMM yyyy", Locale("in", "ID"))
+        val dateParse = dateFormat.parse(tglLhr)
+        val dateFormatFinal = SimpleDateFormat("dd-MM-yyyy")
+        return dateFormatFinal.format(dateParse)
+    }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
+    var noHp: String =  "088245411080"
+    fun formatNoHp(noHp: String): String {
+        if (noHp.length < 11 || noHp.length > 12) {
+            return "Nomor Handphone Tidak Valid"
+        }
+        return noHp
+    }
 
     /*
-    *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
+    *  Orang tua bertipe  Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
+    var orangTua: Map<String, String> = mapOf("ayah" to "Stephen Sambura", "ibu" to "Stephani Sambruang")
 
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
+    val hobi: List<String> = listOf("Main Game", "Mendengarkan Musik", "Membaca Komik")
 
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
@@ -31,8 +56,28 @@ class Student {
     * Tanggal Lahir : 10 Agustus 2019.
     * NIM nya menjadi : 5JT10082019
     * */
+    fun formatNim(id: Int, nama: String, tglLhr: String): String {
+        val format = tglLhr.replace("-".toRegex(), "")
+        val inputLength = nama.length - 1
+        val strArray = nama.split("")
+        var singkatan = ""
+        for(i in 0..inputLength){
+            if (strArray[i]==" "){
+                singkatan += strArray[1]
+                singkatan += strArray[i+1]
+            }
+        }
+        val nim = "$id$singkatan$format"
+        return nim
+    }
 
     /*
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
     * */
+    fun getListStudent(): ArrayList<Student> {
+        val listStudent = ArrayList<Student>()
+        listStudent.add(Student())
+        return listStudent
+    }
+    // var id: Int
 }
