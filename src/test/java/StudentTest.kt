@@ -1,35 +1,20 @@
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.BeforeEach
 
 import org.junit.jupiter.api.Test
 
 internal class StudentTest {
+    private lateinit var student: Student
 
-    @Test
-    fun getId() {
+    @BeforeEach
+    fun beforeEach() {
+        student = Student()
+        student.tanggalLahir = "15 Maret 2002"
     }
 
     @Test
-    fun setId() {
-    }
-
-    @Test
-    fun getNama() {
-    }
-
-    @Test
-    fun setNama() {
-    }
-
-    @Test
-    fun getTanggalLahir() {
-    }
-
-    @Test
-    fun setTanggalLahir() {
-    }
-
-    @Test
-    fun date() {
+    fun convertDate() {
+        assertEquals("15-03-2002", student.convertDate(student.tanggalLahir))
     }
 
     @Test
