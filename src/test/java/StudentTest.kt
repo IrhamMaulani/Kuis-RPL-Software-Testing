@@ -40,7 +40,7 @@ internal class StudentTest {
 
     @Test
     fun testGetOrangTuaSuccess(){
-        val ortu = student.orangTua("Stephen Sambura", "Stephani Sambruang")
+        val ortu = student.orangTua()
         assertEquals("ayah: Stephen Sambura ibu: Stephani Sambruang", ortu)
     }
 
@@ -74,8 +74,7 @@ internal class StudentTest {
 
     @Test
     fun testNIMSuccess(){
-        val tanggal = student.formatTanggal("10 Agustus 2019")
-        val data = student.NIM(5, "Joko Tarbiah", tanggal)
+        val data = student.NIM(5, "Joko Tarbiah", "10 Agustus 2019")
         assertEquals("5JT10082019", data)
     }
 

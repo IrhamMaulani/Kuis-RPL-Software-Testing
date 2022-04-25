@@ -12,7 +12,6 @@ class Student() {
     var nomorHp: String
     lateinit var ayah: String
     lateinit var ibu: String
-    lateinit var nim: String
 
     constructor(id: Int, nama: String, tanggalLahir: String, nomorHp: String): this(){
         this.id = id
@@ -78,7 +77,7 @@ class Student() {
     fun NIM (id: Int, nama: String, tanggalLahir: String): String {
         val tempNIM = mutableListOf<String>()
         var x = 0
-        val tanggal = tanggalLahir.replace("-","")
+        val tanggal = formatTanggal(tanggalLahir).replace("-","")
         tempNIM.add(id.toString())
 
         if (" " in nama){

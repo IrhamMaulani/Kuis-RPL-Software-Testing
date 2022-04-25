@@ -19,12 +19,13 @@ internal class StudentControllerTest {
 
     @Test
     fun getTanggalLahirSuccess(){
-        assertEquals("10-08-2019",studentController.getTanggalLahir())
+        assertEquals("10-08-2019",studentController.getTanggalLahir("10 Agustus 2019"))
     }
 
     @Test
     fun getNIMSuccess(){
-        assertEquals("5JT10082019", studentController.getNIM())
+        assertEquals("5JT10082019", studentController.getNIM(
+            5,"Joni Tarbiah","10 Agustus 2019"))
     }
 
     @Test

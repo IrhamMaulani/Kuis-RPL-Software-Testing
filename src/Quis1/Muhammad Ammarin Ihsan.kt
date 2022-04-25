@@ -31,6 +31,8 @@ No 3.
 Berikan pendapat kalian tentang pekerjaan QA Engineer sedangkan disisi lain Software Engineer
 telah melakukan testing
 
+Jawaban:
+
 Dari website https://u-tor.com/topic/what-does-qa-engineer-do disebutkan bahwa QA Engineer berfokus pada improvisasi
 kualitas software dan mencegah kecacatan pada software dengan berspesialisasi di bidang testing. Pekerjaan yang dilakukan
 software engineer lebih mengarah pada peningkatan kualitas pada software yang bisa dianalogikan sebagai pencegah kecacatan
@@ -42,6 +44,8 @@ UI, UX, Performa, sampai keamanan. Namun tidak semuanya dapat dilakukan karena
 keterbatasan waktu dan mahalnya biaya yang harus dikeluarkan. Berikan pendapat
 kalian dampak apa yang terjadi jika pengujian diatas tidak diberikan pada perangkat lunak
 
+Jawaban:
+
 Berdasarkan sumber yang saya baca pada https://www.ibeta.com/why-the-cost-of-software-testing-is-totally-worth-it/
 Dapat Saya simpulkan bahwa biaya yang dikeluarkan pada testing biasanya tidak melebihi keuntungan yang didapat ketika
 software dipublish. Akan tetapi hal ini tidak menutup kemungkinan untuk melakukan testing dengan budget terbatas.
@@ -50,6 +54,8 @@ Dengan dilakukannya software testing maka kita dapat memperbaiki kekurangan - ke
 No 5.
 Berikan pendapat kalian tentang testing perangkat lunak secara manual? Apakah di saat
 banyaknya testing secara otomatisasi dilakukan testing secara manual perlu dilakukan?
+
+Jawaban:
 
 Berdasarkan blog https://performancelabus.com/manual-testing-in-software-development/ dijelaskan bahwa manual testing
 memastikan kebutuhan client pada software terpenuhi dengan melakukan testing yang bersifat spesifik. Manual testing
