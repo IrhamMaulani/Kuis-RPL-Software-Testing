@@ -12,7 +12,6 @@ class Student() {
     var nomorHp: String
     lateinit var ayah: String
     lateinit var ibu: String
-    lateinit var nim: String
 
     constructor(id: Int, nama: String, tanggalLahir: String, nomorHp: String): this(){
         this.id = id

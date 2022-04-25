@@ -1,6 +1,4 @@
-import kotlin.reflect.KProperty
-
-class StudentController(id: Int, nama: String, tanggalLahir: String, nomorHp: String){
+open class StudentController(id: Int, nama: String, tanggalLahir: String, nomorHp: String){
     val pelajar = Student(id,nama,tanggalLahir,nomorHp)
 
 

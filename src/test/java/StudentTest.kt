@@ -40,7 +40,7 @@ internal class StudentTest {
 
     @Test
     fun testGetOrangTuaSuccess(){
-        val ortu = student.orangTua("Stephen Sambura", "Stephani Sambruang")
+        val ortu = student.orangTua()
         assertEquals("ayah: Stephen Sambura ibu: Stephani Sambruang", ortu)
     }
 
