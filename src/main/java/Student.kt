@@ -54,16 +54,44 @@ class Student {
     }
     
     // Fungsi NIM
-    fun NIM() {
-        
+     fun NIM (id: Int, nama: String, tglLahir: String): String {
+        val nimSementara = mutableListOf<String>()
+        val tanggal = formatTanggal(tglLahir).replace("-","")
+        var i = 0
+        nimSementara.add(id.toString())
+
+        if (" " in nama){
+            val namaArray: List<String> = nama.split(" ")
+            while ( i < namaArray.size) {
+                nimSementara.add(namaArray[i].take(1))
+                i++
+            }
+        } else {
+            nimSementara.add(nama.take(1))
+        }
+        nimSementara.add(tanggal)
+        return nimSementara.joinToString("")
     }
-    
+
     // Fungsi Orangtua
-    class ortu() {
-        
+     class ortu() {
+        var namaAyah: String = "Stephen Sambura"
+        var namaIbu : String = "Stephani Sambruang"
+        fun menampilkanortu(): Pair<String,String> {
+            println("Ayah : $namaAyah")
+            println("Ibu : $namaIbu")
+            return Pair(namaAyah, namaIbu)
+        }
     }
+
     
     // Fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
-    val getStudentArrayList
     
+       val getStudentArrayList: ArrayList<Student>
+        get() {
+            val list = ArrayList<Student>()
+            list.add(this)
+            return list
+        }
+
 }
