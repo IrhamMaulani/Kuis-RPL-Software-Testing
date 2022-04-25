@@ -12,9 +12,9 @@ import java.util.*
 class Student(private var id: Int, private var name: String, private var birthday: String,
               private var phoneNumber: String){
         fun setId(id: Int){this.id = id}
-        fun getId() = this.id
+        private fun getId() = this.id
         fun setName(name: String){this.name = name}
-        fun getName() = this.name
+        private fun getName() = this.name
         fun setBirthday(birthday: String){this.birthday = birthday}
         fun setPhoneNumber(phoneNumber: String){this.phoneNumber = phoneNumber}
 /*
@@ -26,7 +26,9 @@ class Student(private var id: Int, private var name: String, private var birthda
     }
 */
 
-    fun identity(): String = "$id $name $birthday $phoneNumber"
+    fun identity(): String {
+        return "$id $name $birthday $phoneNumber"
+    }
 
     fun getphoneNumber(): String {
         return if (phoneNumber.length == 11 || phoneNumber.length == 12) {
@@ -46,14 +48,13 @@ class Student(private var id: Int, private var name: String, private var birthda
     //  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
 
     class Parent(private var ayah: String, private var ibu: String){
-        fun setAyah(ayah: String){this.ayah = ayah}
-        fun getAyah() = this.ayah
-        fun setIbu(ibu: String){this.ibu = ibu}
-        fun getIbu() = this.ibu
+        private fun getAyah() = this.ayah
+        private fun getIbu() = this.ibu
         fun show (): String {
             return("${getAyah()}, ${getIbu()}")
         }
     }
+
     /*NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
     dan merupakan kode yang berupa gabungan ID, huruf pertama dan akhir dari nama student,
     dan tanggal lahir : Contoh ID=5, nama : Joko Tarbiah,
@@ -70,11 +71,23 @@ class Student(private var id: Int, private var name: String, private var birthda
     /* Hobi yang bertipe array atau list atau arraylist yang berisikan string
        contoh : ['Bersepeda', 'Bernyanyi', 'Makan'] */
 
-    fun hobbies(){
-        val hobbies = arrayOf("")
-        println(hobbies.contentToString())
+    fun hobbies(): String {
+        val hobi: Array<String> = arrayOf("Minum Coklat Panas ", "Bermain Tictactoe ", "Bermain Permainan Papan ")
+        val stringBuilder = StringBuilder()
+        for (i in hobi) {
+            stringBuilder.append(i).append(", ")
+        }
+        return stringBuilder.toString().substring(0, stringBuilder.length - 2)
     }
-}
-    /*
+   /*
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
     * */
+    fun getListStudent(): ArrayList<Student> {
+       val listStudent = ArrayList<Student>()
+       listStudent.add(Student(1, "Test name", "12 Desember 2001", "08934234432"))
+       for (each in listStudent){
+           return listStudent
+       }
+       return listStudent
+    }
+}

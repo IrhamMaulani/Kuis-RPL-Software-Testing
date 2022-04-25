@@ -49,11 +49,6 @@ internal class StudentTest {
     }
 
     @Test
-    fun hobbies() {
-
-    }
-
-    @Test
     fun parent(){
         val expected = "Nama Bapak, Nama Ibu"
         assertEquals(expected, parent.show())
