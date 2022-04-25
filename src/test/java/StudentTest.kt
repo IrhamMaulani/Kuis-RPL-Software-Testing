@@ -26,6 +26,11 @@ class StudentTest {
     }
 
     @Test
+    fun testNoHP(){
+        assertEquals("0813579246",student.noHP)
+    }
+
+    @Test
     fun testNoHpFail(){
         student.noHP = "0813579246"
         assertEquals("No Hp Tidak Valid",student.noHP)
