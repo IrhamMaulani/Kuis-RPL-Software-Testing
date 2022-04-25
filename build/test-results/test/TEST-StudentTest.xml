@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="StudentTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-04-25T13:10:48" hostname="LAPTOP-HJJVRCR0" time="0.101">
+  <properties/>
+  <testcase name="testFormatTglSuccess()" classname="StudentTest" time="0.065"/>
+  <testcase name="testGetNoHPSuccess1()" classname="StudentTest" time="0.002"/>
+  <testcase name="testGetNoHPSuccess2()" classname="StudentTest" time="0.002"/>
+  <testcase name="testGetNIMSuccess()" classname="StudentTest" time="0.019"/>
+  <testcase name="testGetObjectAyahSuccess()" classname="StudentTest" time="0.002"/>
+  <testcase name="testGetListSuccess()" classname="StudentTest" time="0.002"/>
+  <testcase name="testGetHobiSuccess()" classname="StudentTest" time="0.001"/>
+  <testcase name="testGetObjectIbuSuccess()" classname="StudentTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
