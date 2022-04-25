@@ -46,13 +46,13 @@ class Student {
     *  Orang tua bertipe  Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
-    var orangTua: Map<String, String> = mapOf("ayah" to "Stephen Sambura", "ibu" to "Stephani Sambruang")
+    var orangTua: Map<String, String> = mapOf("ayah" to "Muhammad Majedi", "ibu" to "Aulia Nor Saputri")
 
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
-    val hobi: List<String> = listOf("Main Game", "Mendengarkan Musik", "Membaca Komik")
+    val hobi: List<String> = listOf("Main Game", "Mendengarkan Musik", "Membaca Komik", "Nonton Anime", "Nonton Vtuber 2D")
 
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
@@ -62,10 +62,11 @@ class Student {
     * NIM nya menjadi : 5JT10082019
     * */
     var nim: String = ""
-        get() = field
-        set(value) {
+        get() {
             field = formatNim(this.id, this.nama, this.tglLhr)
+            return field
         }
+
 
     fun formatNim(id: Int, nama: String, tglLhr: String): String {
         val tgl: String = formatTanggal(tglLhr)

@@ -15,5 +15,13 @@ class StudentTest {
         student.tglLhr = "29 Februari 2020"
     }
 
+    @Test
+    fun testTanggal(){
+        assertEquals("29-02-2020", student.formatTanggal(student.tglLhr))
+    }
 
+    @Test
+    fun testNim(){
+        assertEquals("69MF29022020", student.formatNim(student.id, student.nama, student.tglLhr))
+    }
 }
