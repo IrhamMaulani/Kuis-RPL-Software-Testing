@@ -1,3 +1,4 @@
+ class CharlesPhandurand() {
 /*
     # Kuis-RPL-Software-Testing
 
@@ -70,3 +71,4 @@
     manual perlu dilakukan, karena manual testing dapat mengetahui feedback UI/UX dari orang secara langsung yang tidak bisa dilakukan menggunakan
     tools, karena melibatkan perasaan manusia.
 */
+ }
