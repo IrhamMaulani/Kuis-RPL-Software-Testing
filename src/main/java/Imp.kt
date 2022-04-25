@@ -1,5 +1,3 @@
-import java.util.*
-
 fun main(args: Array<String>) {
     var student:Student = Student()
     println("ID: ${student.studentid}")
@@ -10,7 +8,7 @@ fun main(args: Array<String>) {
     println("Tanggal Lahir (reformat) : ${student.tanggal()}")
     println("Conditional Nomor HP : ${student.Phonenum()}")
 
-    val ortu = Student.Orangtua() // create l1 object of Lamp class
+    val ortu = Student.Orangtua()
     ortu.displayortu()
     print("Hobi : ")
     println("${student.arrayhobi()}")

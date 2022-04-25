@@ -3,7 +3,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
 
-class Student {
+class Student() {
 
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
@@ -22,23 +22,10 @@ class Student {
     var dateformat = DateFormatSymbols(id)
     var nohp: String = "081234567891"
 
-    //Member functions of class to set student name
-    fun setStudentName(nama:String){
-        this.nama=nama
-    }
-
-    //Member functions of class to set student age
-    fun setStudentAge(tlahir:String){
-        this.tlahir=tlahir
-    }
-    fun setStudentId(id:Int){
-        this.studentid=studentid
-    }
 
 
-    //Member functions of class to return student details
     fun getStudentDetails():String{
-        return "Name :  $nama, Age : $tlahir"
+        return "ID : $studentid Nama :  $nama, Tanggal lahir : $tlahir, Nomor hp : $nohp"
     }
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
@@ -52,7 +39,7 @@ class Student {
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
     fun Phonenum(): String {
-        if(nohp.length == 11||nohp.length == 12) {
+        if(nohp.length == 11|| nohp.length == 12) {
             var Nomor = nohp
             return Nomor;
         }
@@ -104,9 +91,20 @@ class Student {
         val tlahir = tanggal()
         val tgl = tlahir?.replace("-","")
         /*pake hasil dibagian baris 40 biar udh ke reformat*/
-
-        return "${studentid}$inisial$tgl";
+        val nim = "$studentid$inisial$tgl"
+        return "$studentid$inisial$tgl";
     }
+
+    /*
+    * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
+    * */
+
+    val getStudentArray: ArrayList<Student>
+        get() {
+            val Studentlist = ArrayList<Student>()
+            Studentlist.add(this)
+            return Studentlist
+        }
 }
 
 
@@ -119,6 +117,3 @@ class Student {
 
 
 
-    /*
-    * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
-    * */
