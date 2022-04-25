@@ -37,9 +37,12 @@ class Student {
             else field = value
         }
 
-    val ortu = orangTua("", "")
+    object ortu {
+        var ayah : String = "Cristiano Ronaldo"
+        var ibu : String = "Kimberly Rider"
+    }
 
-    val hobi: mutableList<String> = listOf("Bersepeda", "Bernyanyi", "Makan", "Berenang", "Berlari")
+    val hobi: mutableList<String> = listOf("Bersepeda", "Bernyanyi", "Makan", "Berenang", "Berlari", "Musik")
 
     var nim: String = ""
         get() {
@@ -47,5 +50,8 @@ class Student {
             return field
         }
 
-
+    fun getList(): ArrayList<Student> {
+        val list.add(this)
+        return list
+    }
 }
