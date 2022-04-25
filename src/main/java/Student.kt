@@ -1,38 +1,97 @@
-class Student {
-    // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
-    // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
+import kotlin.collections.ArrayList
 
-    // properties student berisikan :
+class Student() {
+    
+    var indonesia = Locale("in", "ID") // Format tanggal lahir menjadi standar tanggal
+    var id: Int // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat
+    var nama: String // Nama bertipe String
+    var tglLahir: String // Tanggal lahir bertipe String
+    var noHp: String // Nomor handphone bertipe String
+    lateinit var namaAyah: String // Orang tua bertipe Object yang berisi String
+    lateinit var namaIbu: String // Orang tua bertipe Object yang berisi String
+    lateinit var NIM: String // NIM yang memiliki tipe data String
+    
+   constructor(id: Int, nama: String, tglLahir: String, noHp: String): this(){
+        this.id = id
+        this.nama = nama
+        this.tglLahir = tglLahir
+        this.noHp = noHp
+    }
 
-    // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
+    init {
+        this.id = 0
+        this.nama = ""
+        this.tglLahir = ""
+        this.noHp = ""
+    }
 
-    // Nama bertipe String, Contoh : Joko Tarbiah
+    fun getFullIdentification(): List<String> = listOf("$id", nama, tglLahir, noHp)
 
-    // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
+    //Mengubah menjadi format dd-mm-yyyy
+    fun formatTanggal(tanggal: String): String {
+        val pengubah = DateTimeFormatter.ofPattern("dd MMMM yyyy", indonesia)
+        val tanggal = LocalDate.parse(tanggal, pengubah)
+        val keluaran = tanggal.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
+        return (keluaran)
+    }
+    
+    // Fungsi Nomor Hp
+    fun getNomorHp(no: String): String {
+        if(no.length == 11 || no.length == 12){
+            return no
+        } else {
+            return "Nomor tidak valid"
+        }
+    }
+    
+    // Fungsi Hobi
+    fun hobi(array: List<String>): List<String> {
+        val hobi = array.toList()
+        return hobi
+    }
+    
+    // Fungsi NIM
+     fun NIM (id: Int, nama: String, tglLahir: String): String {
+        val nimSementara = mutableListOf<String>()
+        val tanggal = formatTanggal(tglLahir).replace("-","")
+        var i = 0
+        nimSementara.add(id.toString())
 
-    // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
+        if (" " in nama){
+            val namaArray: List<String> = nama.split(" ")
+            while ( i < namaArray.size) {
+                nimSementara.add(namaArray[i].take(1))
+                i++
+            }
+        } else {
+            nimSementara.add(nama.take(1))
+        }
+        nimSementara.add(tanggal)
+        return nimSementara.joinToString("")
+    }
 
-    // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
+    // Fungsi Orangtua
+     class ortu() {
+        var namaAyah: String = "Stephen Sambura"
+        var namaIbu : String = "Stephani Sambruang"
+        fun menampilkanortu(): Pair<String,String> {
+            println("Ayah : $namaAyah")
+            println("Ibu : $namaIbu")
+            return Pair(namaAyah, namaIbu)
+        }
+    }
 
-    /*
-    *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
-    *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
-    */
+    
+    // Fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
+    
+       val getStudentArrayList: ArrayList<Student>
+        get() {
+            val list = ArrayList<Student>()
+            list.add(this)
+            return list
+        }
 
-    /*
-    * Hobi yang bertipe array atau list atau arraylist yang berisikan string
-    * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
-    * */
-
-    /*
-    * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
-    * dan merupakan kode yang berupa gabungan ID, huruf pertama dan akhir dari nama student,
-    * dan tanggal lahir : Contoh ID=5, nama : Joko Tarbiah,
-    * Tanggal Lahir : 10 Agustus 2019.
-    * NIM nya menjadi : 5JT10082019
-    * */
-
-    /*
-    * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
-    * */
 }
