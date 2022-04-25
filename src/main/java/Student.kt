@@ -53,7 +53,13 @@ class Student {
     * NIM nya menjadi : 5JT10082019
     * */
     fun generateNIM(id: Int, nama: String, tanggalLahir: String): String {
-        val nim: String = ""
+        var inisial = nama.split(" ")
+        var satu = inisial[0].toCharArray()
+        var dua = inisial[1].toCharArray()
+        var tl = convertDate(tanggalLahir)
+        var format = tl.replace("-", "")
+
+        val nim = "$id${satu[0]}${dua[0]}${format}"
         return nim
     }
 
@@ -70,4 +76,5 @@ fun main() {
     println(student.convertDate("15 Maret 2002"))
     println(student.Ortu)
     println(student.hobi[0])
+    println(student.generateNIM(1, "Lail Rahmah", "10 November 2002"))
 }
