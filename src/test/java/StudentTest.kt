@@ -10,9 +10,9 @@ internal class StudentTest {
     fun beforeEach() {
         student = Student()
         student.nama = "Laily Zida"
-        student.noHp = "08xxxxxxxxx"
         student.id = 3
         student.tanggalLahir = "15 Maret 2002"
+        student.noHp = "12345678910"
     }
 
     @Test
@@ -21,38 +21,13 @@ internal class StudentTest {
     }
 
     @Test
-    fun getNoHp() {
-    }
-
-    @Test
-    fun setNoHp() {
-    }
-
-    @Test
-    fun getOrtu() {
-    }
-
-    @Test
-    fun setOrtu() {
-    }
-
-    @Test
-    fun getHobi() {
-    }
-
-    @Test
-    fun setHobi() {
-    }
-
-    @Test
-    fun getNim() {
-    }
-
-    @Test
-    fun setNim() {
-    }
-
-    @Test
     fun generateNIM() {
+        assertEquals("3LZ15032002", student.generateNIM(student.id, student.nama, student.tanggalLahir))
+    }
+
+    @Test
+    fun testNoHpFalse() {
+        assertNotEquals("Phone Number Is Not Valid", student.setNumPhone(student.noHp))
+        assertEquals("12345678910", student.setNumPhone(student.noHp))
     }
 }

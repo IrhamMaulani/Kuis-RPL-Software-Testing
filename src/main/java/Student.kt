@@ -2,8 +2,9 @@ import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
+import kotlin.collections.ArrayList
 
-class Student {
+class Student() {
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
 
@@ -26,11 +27,17 @@ class Student {
     }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
-    var noHp : String = ""
-        get() {
-            if (noHp.length < 11 || noHp.length > 12) return "Phone Number Is Not Valid"
-            else return noHp
-        }
+    var noHp : String = "12345678910"
+    fun setNumPhone(number: String): String {
+        if (number.length<11 || number.length>12) return "Phone Number Is Not Valid"
+        else return number
+    }
+//        get() {
+//            if (noHp.length < 11 || noHp.length > 12) {
+//                return "Phone Number Is Not Valid"
+//            }
+//            else return noHp
+//        }
 
 
     /*
@@ -63,10 +70,14 @@ class Student {
         return nim
     }
 
-
     /*
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
     * */
+    fun getListStudent(): ArrayList<Student> {
+        val listStudent = ArrayList<Student>()
+        listStudent.add(Student())
+        return listStudent
+    }
 
 }
 
@@ -77,4 +88,8 @@ fun main() {
     println(student.Ortu)
     println(student.hobi[0])
     println(student.generateNIM(1, "Lail Rahmah", "10 November 2002"))
+    println(student.getListStudent())
+
+    student.noHp = "123456789"
+
 }
