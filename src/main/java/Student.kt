@@ -41,14 +41,13 @@ class Student() {
     }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
-    fun getNomorHp(no: String): String? {
+    fun getNomorHp(no: String): String {
         if(no.length == 11 || no.length == 12){
             return no
         } else {
-            return null
+            return "Digit nomor HP tidak memenuhi syarat (11 - 12)"
         }
     }
-
 
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.

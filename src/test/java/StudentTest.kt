@@ -26,6 +26,16 @@ internal class StudentTest {
     }
 
     @Test
+    fun testGetNomorHPError(){
+        assertEquals("Digit nomor HP tidak memenuhi syarat (11 - 12)", student.getNomorHp("08532"))
+    }
+
+    @Test
+    fun testGetNomorHPFailed(){
+        assertEquals(student.getNomorHp("08532"),"Digit nomor HP tidak memenuhi syarat (11 - 12)")
+    }
+
+    @Test
     fun testGetOrangTuaSuccess(){
         assertEquals("ayah: Stephen Sambura ibu: Stephani Sambruang",
             student.orangTua("Stephen Sambura", "Stephani Sambruang"))
@@ -39,7 +49,7 @@ internal class StudentTest {
 
     @Test
     fun testTanggalLahir(){
-        val tanggal = student.tanggalLahir
+        val tanggal = "10 Agustus 2019"
 
         val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale("in", "ID"))
         val date = LocalDate.parse(tanggal, formatter)
@@ -50,14 +60,13 @@ internal class StudentTest {
 
     @Test
     fun testFormatTanggal(){
-        val tanggal = student.tanggalLahir
-        val hasil = student.formatTanggal(tanggal)
+        val tanggal = "10 Agustus 2019"
 
         val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale("in", "ID"))
         val date = LocalDate.parse(tanggal, formatter)
         val expectation = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
 
-        assertEquals(expectation, hasil, "Hasil tidak sama")
+        assertEquals(expectation, student.formatTanggal(tanggal))
     }
 
     @Test
