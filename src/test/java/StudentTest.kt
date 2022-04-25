@@ -30,4 +30,9 @@ class StudentTest {
     fun testDateFormat() {
         assertEquals("22-02-2002", student.formatTgl(student.Sbirth))
     }
+
+    @Test
+    fun testNoHP(){
+        assertEquals("08135792468", student.Snphone)
+    }
 }
