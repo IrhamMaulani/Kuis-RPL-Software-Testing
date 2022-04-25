@@ -22,23 +22,26 @@ internal class StudentTest {
 
     @Test
     fun testGetNomorHpSuccess(){
-        assertEquals("085312345678", student.getNomorHp("085312345678"))
+        val noHp = student.getNomorHp("085312345678")
+        assertEquals("085312345678", noHp)
     }
 
     @Test
     fun testGetNomorHPError(){
-        assertEquals("Digit nomor HP tidak memenuhi syarat (11 - 12)", student.getNomorHp("08532"))
+        val noHp = student.getNomorHp("0853")
+        assertEquals("Digit nomor HP tidak memenuhi syarat (11 - 12)", noHp)
     }
 
     @Test
     fun testGetNomorHPFailed(){
-        assertEquals(student.getNomorHp("08532"),"Digit nomor HP tidak memenuhi syarat (11 - 12)")
+        val noHp = student.getNomorHp("0853")
+        assertEquals(noHp,"Digit nomor HP tidak memenuhi syarat (11 - 12)")
     }
 
     @Test
     fun testGetOrangTuaSuccess(){
-        assertEquals("ayah: Stephen Sambura ibu: Stephani Sambruang",
-            student.orangTua("Stephen Sambura", "Stephani Sambruang"))
+        val ortu = student.orantTua("Stephen Sambura", "Stephani Sambruan")
+        assertEquals("ayah: Stephen Sambura ibu: Stephani Sambruang", ortu)
     }
 
     @Test

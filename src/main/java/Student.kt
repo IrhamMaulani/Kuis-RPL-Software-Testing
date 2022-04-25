@@ -33,7 +33,7 @@ class Student() {
 
     //Fungsi ubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy
     fun formatTanggal(tanggal: String): String {
-        val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", indonesia)
+        val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", indonesia)
         val date = LocalDate.parse(tanggal, formatter)
         val hasil = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
 
@@ -45,7 +45,7 @@ class Student() {
         if(no.length == 11 || no.length == 12){
             return no
         } else {
-            return "Digit nomor HP tidak memenuhi syarat (11 - 12)"
+            return "Syarat nomor yaitu 11 dan 12 angka"
         }
     }
 
