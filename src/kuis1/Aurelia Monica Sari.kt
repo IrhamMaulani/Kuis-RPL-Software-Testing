@@ -1,3 +1,4 @@
+/*
 1.	Berdasarkan website yang saya bava yaitu https://socs.binus.ac.id,
 Software testing merupakan salah satu bagian penting dan sering digunakan dalam pengembangan
 dari suatu software. Dengan adanya software testing, software engineer mampu mengenali error
@@ -58,3 +59,5 @@ berulang-ulang sehingga tidak mungkin untuk dikerjakan secara manual.
 Berdasarkan sumber yang saya baca. Testing secara manual juga perlu dilakukan karena mampu mendeteksi bug yang tidak
 terlihat oleh testing secara otomatisasi, sehingga apabila kita tidak melakukan testing secara manual kermungkinan
 terburuknya adalah terdapat bug pada perangkat lunak yang sudah dirilis.
+
+ */
