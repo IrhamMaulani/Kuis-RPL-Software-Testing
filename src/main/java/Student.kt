@@ -77,7 +77,7 @@ class Student() {
     fun NIM (id: Int, nama: String, tanggalLahir: String): String {
         val tempNIM = mutableListOf<String>()
         var x = 0
-        val tanggal = tanggalLahir.replace("-","")
+        val tanggal = formatTanggal(tanggalLahir).replace("-","")
         tempNIM.add(id.toString())
 
         if (" " in nama){
