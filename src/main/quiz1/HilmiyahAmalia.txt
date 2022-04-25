@@ -1,0 +1,27 @@
+1.	Dewasa ini, pembuatan testing pada perangkat lunak umum dilakukan pada saat tahap implementasi yang dilakukan oleh software engineer. Berikan opini kalian apakah software engineer pada tahap implementasi wajib melakukan test atau tidak?
+Jawab :
+Berdasarkan yang saya baca pada https://id.wikipedia.org/wiki/Proses_pengembangan_perangkat_lunak dijelaskan bahwa pada tahap implementasi harus dilakukan proses pengujian terhadap program yang dikembangkan untuk mengecek ada kesalahan atau tidak. 
+Menurut saya test pada tahap implementasi wajib dilakukan untuk menguji coba apakah software yang dikembangkan dapat bekerja secara optimal atau tidak. 
+
+2.	Unit test dan integration test merupakan test yang dilakukan pada tahap implementasi. berikan pendapat kalian jika dua test ini tidak dilakukan beserta dampak yang akan terjadi pada perangkat lunak
+Jawab :
+https://sis.binus.ac.id/2020/09/14/testing-level/ dan https://se.ittelkom-pwt.ac.id/2017/10/25/pentingnya-melakukan-pengujian-perangkat-lunak-software-testing/  Unit Testing adalah metode verifikasi perangkat lunak di mana programmer melakukan pengujian pada suatu unit program untuk memastikan layak untuk tidaknya dipakai. Unit testing berfokus pada verifikasi di unit terkecil pada desain perangkat lunak (komponen atau modul perangkat lunak.   Unit Testing meyakinkan bahwa masing-masing unit tersebut berjalan dan memenuhi fungsi sebagaimana mestinya. Setelah unit testing dilakukan, langkah berikutnya adalah memeriksa bagaimana unit-unit tersebut bekerja sebagai suatu kombinasi, bukan lagi sebagai suatu unit yang individual yaitu dengan integration test.
+
+Jadi menurut saya jika kedua test tersebut tidak dilakukan maka kesalahan yang terdapat pada software tidak teridentifikasi yang tentunya akan sulit untuk mengembangkan software lebih lanjut dan akan menimbulkan kerugian ekonomi yang besar karena masalah-masalah yang ditimbulkan oleh software.
+
+3.	Berikan pendapat kalian tentang pekerjaan QA Engineer sedangkan disisi lain Software Engineer telah melakukan testing
+Jawab :
+Berdasarkan yang saya baca pada https://medium.com/@makersinstitute/mengenal-lebih-jauh-tentang-software-quality-assurance-844361cd50db QA Engineer bertugas untuk membuat porgram pengujian otomatis, membuat laporan pengujian, memberikan masukan atas aplikasi yang diuji, serta berkomunikasi dengan pihak-pihak yang berkepentingan, seperti pengembang UI/UX, back end atau product manager (PM).
+
+Menurut saya walaupun Software Engineer telah melakukan testing QA Engineer juga harus melakukannya karena QA Engineer berperan penting dalam seluruh kegiatan pengembangan software dari awal hingga akhir termasuk dalam fase testing untuk memastikan bahwa semua prosesnya berjalan sesuai ketentuan.
+
+4.	Terdapat banyak test pada perangkat lunak, mulai dari test business logic, UI, UX, Performa, sampai keamanan. Namun tidak semuanya dapat dilakukan karena keterbatasan waktu dan mahalnya biaya yang harus dikeluarkan. Berikan pendapat kalian dampak apa yang terjadi jika pengujian diatas tidak diberikan pada perangkat lunak
+Jawab :
+https://mti.binus.ac.id/2016/04/08/pengujian-perangkat-lunak/  tujuan utama pengujian perangkat lunak adalah untuk memastikan tidak ada kesalahan dan sesuai dengan ekspektasi yang diharapkan yang tertuang dalam rencana dan perancangan yang telah dibuat dan disetujui sebelumnya.
+Menurut saya sebaiknya semua test dalam proses pengembangan software harus dilakukan karena semuanya itu penting. Namun jika tidak dapat melakukan semuanya karena keterbatasan waktu dan biaya mungkin dampak yang akan terjadi adalah permasalahan pada software tidak teridentifikasi dan software yang dibuat tidak sesuai harapan.
+
+5.	Berikan pendapat kalian tentang testing perangkat lunak secara manual? Apakah di saat banyaknya testing secara otomatisasi dilakukan testing secara manual perlu dilakukan?
+Jawab :
+https://qatros.com/blog/blog-technology-1/post/perbedaan-manual-testing-dan-automated-testing-27 
+https://u-tor.com/topic/importance-of-manual-testing-in-qa#:~:text=Manual%20testing%20is%20an%20important,the%20technical%20and%20business%20criteria Manual testing berperan penting untuk menguji kualitas software karena yang melakukan pengujian adalah manusia.
+Menurut saya manual testing perlu dilakukan karena dapat mendapatkan penilaian langsung dari manusia karena dapat berinteraksi langsung dengan UI dan merasakan pengalaman penggunanya.
