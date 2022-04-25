@@ -52,12 +52,12 @@ class Student() {
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
-    fun orangTua(ayah: String, ibu: String): String {
-        this.ayah = ayah
-        this.ibu = ibu
+    fun orangTua(): String {
+        val orangTua = OrangTua("Stephen Sambura", "Stephani Sambruang")
+        this.ayah = orangTua.ayah
+        this.ibu = orangTua.ibu
         return "ayah: $ayah ibu: $ibu"
     }
-
 
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
@@ -104,4 +104,7 @@ class Student() {
         list.add(this)
         return list
     }
+}
+
+class OrangTua(val ayah: String,val ibu: String){
 }
