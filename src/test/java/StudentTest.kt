@@ -27,13 +27,20 @@ internal class StudentTest {
     @Test
     fun testArrayHobiSucces() {
         val expected = "Bersepeda , Bernyanyi , Makan "
-//        val arrayHobi = student.arrayhobi()
         assertEquals(expected,student.arrayhobi())
     }
 
     @Test
-    fun testGenNim() {
+    fun testGenNIMSucces() {
         val expected = "5JT10082019"
         assertEquals(expected,student.genNIM())
     }
+
+    @Test
+    fun testGetStudentArry (){
+        val array = student.getStudentArray
+        assertEquals(array,student.getStudentArray)
+    }
+
+
 }

@@ -13,7 +13,7 @@ class StudentController(studentid: Int, nama: String, tlahir: String, nohp: Stri
         return maha.genNIM()
     }
 
-    fun getHobi(hobi: List<String>) {
+    fun getHobi(hobi: List<String>): String {
         return maha.arrayhobi()
     }
 }

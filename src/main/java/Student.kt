@@ -62,11 +62,6 @@ class Student() {
     */
     class Orangtua() {
 
-<<<<<<< Updated upstream
-        var ayah: String = "Stephen Sambura"
-        var ibu: String = "Stephani Sambruang"
-        fun displayortu(): Pair<String,String>{
-=======
         var ayah :String = ""
             get() = field
             set(value) { field = value }
@@ -74,7 +69,6 @@ class Student() {
             get() = field
             set(value) { field = value }
         fun displayortu() {
->>>>>>> Stashed changes
             println("Ayah : $ayah")
             println("Ibu : $ibu")
             return Pair(ayah,ibu)
@@ -95,11 +89,8 @@ class Student() {
         }
         val c = sb.toString().substring(0, sb.length-2)
         println(c)
-<<<<<<< Updated upstream
         return c
-=======
 
->>>>>>> Stashed changes
     }
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
@@ -127,6 +118,7 @@ class Student() {
     fun getStudentArray(): ArrayList<Student> {
             val Studentlist = ArrayList<Student>()
             Studentlist.add(Student())
+
             return Studentlist
         }
 }
