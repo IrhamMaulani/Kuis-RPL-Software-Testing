@@ -45,9 +45,9 @@ open class Student {
 
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
-    * contoh : ['Bersepeda', 'Bernyanyi', 'Makan', 'Ke indomaret']
+    * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
-//    val hobi : listof("Bersepeda","Bernyanyi","Makan","Plastik","turu")
+    val hobi : List<String> = listOf ("Bersepeda","Bernyanyi","Makan","Melukis", "Nonton")
 
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
