@@ -31,7 +31,7 @@ class Student {
     var nohp : String = ""
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
-    *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
+    *  Contoh : {"ayah" : "majdi", "Ibu" : "Stephani"}
     */
     var ortu : String = ""
 
