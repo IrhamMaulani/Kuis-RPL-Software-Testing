@@ -10,7 +10,7 @@ class Job() {
     }
 
     private val day: List<String> =
-        listOf("Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu")
+        listOf("Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu", "Kebalikan")
 
     init {
         this.id = ""
