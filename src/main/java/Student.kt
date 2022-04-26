@@ -37,7 +37,7 @@ class Student {
 
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
-    * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
+    * contoh : ['Bersepeda', 'Bernyanyi', 'Makan', 'Ke indomaret']
     * */
 
     /*
