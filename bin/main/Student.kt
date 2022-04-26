@@ -1,6 +1,9 @@
-class Student {
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
 
-    
+class Student {
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
 
@@ -8,23 +11,35 @@ class Student {
 
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
 
+    var ID : Int = 0
+
     // Nama bertipe String, Contoh : Joko Tarbiah
+
+    var name : String = " "
 
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
 
+    var tl : String = " "
+
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
+   fun Tanggal() {
+       val format = DateTimeFormatter.ofPattern("dd MMMM, yyyy", Locale.getDefault())
+        val date = LocalDate.parse(tl, format)
+   }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
-
+    var nohp : String = ""
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
+    var ortu : String = ""
 
     /*
     * Hobi yang bertipe array atau list atau arraylist yang berisikan string
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
+    val hobi : listof("Bersepeda","Bernyanyi","Makan")
 
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
