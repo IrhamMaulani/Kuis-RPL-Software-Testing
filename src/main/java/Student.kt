@@ -34,24 +34,28 @@ class Student {
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
 
-    fun setNoTelp(noTelp: String): String? {
-        if(noTelp.length == 11 || noTelp.length == 12){
-            return noTelp
-        } else {
+    fun getNoTelp(noTelp: String): String? {
+        if(noTelp.length < 11 || noTelp.length > 12){
             return null
+        } else {
+            return noTelp
         }
 
-    }
-
-    fun getNoTelp() {
-        this.noTelp
     }
 
     /*
     *  Orang tua bertipe Object yang berisi String nama kedua orang tua.
     *  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
     */
-    var OrangTua = orangTua("Stephen Sambura", "Stephani Sambruang")
+    lateinit var ayah: String
+    lateinit var ibu: String
+
+    fun getorangTua(): String {
+        var OrangTua = orangTua("Stephen Sambura", "Stephani Sambruang")
+        this.ayah = OrangTua.ayah
+        this.ibu = OrangTua.ibu
+        return "ayah: $ayah ibu: $ibu"
+    }
 
 
     /*
@@ -59,7 +63,7 @@ class Student {
     * contoh : ['Bersepeda', 'Bernyanyi', 'Makan']
     * */
 
-    fun hobi(array: List<String>): List<String> {
+    fun getHobi(array: List<String>): List<String> {
         val hobi = array.toList()
         return hobi
     }
@@ -102,4 +106,6 @@ class Student {
         }
 }
 
-class orangTua (ayah: String, ibu: String) {}
+class orangTua (val ayah: String, val ibu: String) {
+
+}
