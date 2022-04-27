@@ -1,0 +1,108 @@
+1.      Dewasa ini, pembuatan testing pada perangkat lunak umum dilakukan 
+        pada saat tahap implementasi yang dilakukan oleh software engineer. 
+        Berikan opini kalian apakah software engineer pada tahap implementasi 
+        wajib melakukan test atau tidak?
+
+        Jawaban :
+        Berdasarkan referensi yang saya dapatkan, tahap implemantasi perangkat 
+        lunak melibatkan transformasi paket data teknis perangkat lunak (TDP) 
+        menjadi satu atau lebih item konfigurasi perangkat lunak yang dibuat,
+        terintegrasi, dan diuji yang siap untuk pengujian penerimaan perangkat
+        lunak. Implementasi meliputi pemberitahuan pengguna, pelatihan pengguna, 
+        instalasi perangkat keras, instalasi perangkat lunak ke komputer produksi, 
+        dan integrasi sistem ke dalam proses kerja sehari-hari. Fase ini berlanjut 
+        hingga sistem beroperasi dalam produksi sesuai dengan kebutuhan pengguna 
+        yang ditentukan. Test pada implementasi adalah praktik mengatur dan
+        memprioritaskan test. Ini dilakukan oleh analis uji yang mengimplementasikan
+        desain uji sebagai kasus uji nyata, proses uji dan data uji. Jadi menurut saya
+        tahap implementasi wajib melakukan test, karena seperti yang dijelaskan diatas
+        tahap implementasi sangat diperlukan untuk kebutuhan pengguna perangkat lunak.
+
+        Referensi :
+        https://www.sciencedirect.com/topics/computer-science/software-implementation
+        http://tryqa.com/what-is-test-implementation-advantages-disadvantage-of-early-implementation/#:~:text=Test%20implementation%20is%20the%20practice,test%20processes%20and%20test%20data.
+
+
+2.      Unit test dan integration test merupakan test yang dilakukan pada tahap 
+        implementasi. berikan pendapat kalian jika dua test ini tidak dilakukan 
+        beserta dampak yang akan terjadi pada perangkat lunak.
+
+        Jawaban :
+        Unit test adalah jenis pengujian perangkat lunak di mana sepotong kecil 
+        kode diuji untuk melihat apakah kode berfungsi seperti yang diharapkan.
+        Tujuan dari pengujian Unit adalah untuk membantu mengurangi biaya perbaikan 
+        bug, karena dengan cara ini, bug atau kesalahan di tingkat kode diidentifikasi 
+        di awal siklus hidup pengembangan.
+        Integration test adalah jenis pengujian dengan memverifikasi apakah antarmuka 
+        diantara dua unit atau modul perangkat lunak berfungsi dengan baik. Integration 
+        merupakan jenis pengujian yang lebih luas yang mencakup koneksi antara 2 atau 
+        lebih termodulasi dan juga dalam beberapa kasus dapat mencakup seluruh aplikasi.
+        Baik Unit test maupun integration test merupakan elemen penting saat melakukan 
+        pengujian perangkat lunak. Menggabungkan kedua jenis, dan lebih khusus mengatur 
+        hasil kedua jenis pengujian menggunakan platform manajemen pengujian seperti 
+        PractiTest dapat membantu meningkatkan visibilitas pengujian secara keseluruhan, 
+        yang akan memungkinkan rilis produk berkualitas lebih baik. Berdasarkan penjelasan
+        diatas maka saya menyimpulkan bahwa jika kedua test ini tidak dilakukan akan berdampak
+        pada kualitas perangkat lunak yang akan dikembangkan nantinya
+
+        Referensi :
+        https://www.practitest.com/qa-learningcenter/resources/unit-test-vs-integration-test/#:~:text=Integration%20Testing%20will%20help%20to,units%20of%20code%20are%20tested.
+
+3.      Berikan pendapat kalian tentang pekerjaan QA Engineer sedangkan disisi lain Software 
+        Engineer telah melakukan testing
+
+        Jawaban :
+        QA Engineer adalah seseorang yang memiliki pengetahuan lengkap tentang berbagai 
+        proses dan metodologi pengujian. Mereka juga harus berpengalaman dalam manajemen 
+        data, pelaporan bug, pemecahan masalah, dan lingkungan pengujian. Perbedaanya disini
+        ialah, Software Engineer bertanggung jawab untuk mengotomatisasi pengujian dan memberikan
+        produk berkualitas tinggi, andal dan skalabel dengan terlibat dalam proses pengembangan
+        sejak awal pembuatan perangkat lunak, sedangkan QA Engineer sepenuhnya bertanggung jawab
+        untuk melakukan pengujian dan tidak termasuk pada bagian perencanaan dan perancangan
+        perangkat lunak.
+
+        Referensi :
+        https://marutitech.com/differences-between-sdet-and-qa/
+
+4.      Terdapat banyak test pada perangkat lunak, mulai dari test business logic, UI, UX, 
+        Performa, sampai keamanan. Namun tidak semuanya dapat dilakukan karena keterbatasan 
+        waktu dan mahalnya biaya yang harus dikeluarkan. Berikan pendapat kalian dampak apa 
+        yang terjadi jika pengujian diatas tidak diberikan pada perangkat lunak.
+
+        Jawaban :
+        Terdapat beberapa alasan yang membuat test pada perangkat lunak itu penting, diantaranya :
+         - Untuk mengetahui cacat atau kesalahan yang mungkin terjadi selama fase pengembangan
+         - Untuk memverifikasi keandalan pengguna dan kepuasan mereka dalam menggunakan perangkat lunak
+         - Untuk menguji kualitas produk yang dihasilkan demi mendapatkan kepercayaan pengguna
+         - Untuk memberikan kepuasan kepada pengguna terhadap produk berkualitas tinggi dengan
+        biaya perawatan minimal serta memberikan hasil yang baik dan tepat
+         - Untuk memberikan kinerja yang efektif pada perangkat lunak
+         - Untuk memastikan bahwa perangkat lunak tidak mengakibatkan kegagalan yang akan berdampak
+         pada biaya tambahan.
+
+         Dari beberapa alasan diatas dapat saya simpulkan jika pengujian tidak dilakukan akan berdampak
+         pada kualiatas, biaya serta kepuasan pengguna yang mana sangat diperlukan dalam pengembangan
+         perangkat lunak sehingga tidak mengakibatkan kegagalan yang mana akan sangat merugikan untuk
+         para pengembang suatu perangkat lunak
+
+         Referensi :
+         https://www.h2kinfosys.com/blog/importance-of-software-testing/
+
+5.      Berikan pendapat kalian tentang testing perangkat lunak secara manual? Apakah di saat banyaknya 
+        testing secara otomatisasi dilakukan testing secara manual perlu dilakukan?
+
+        Jawaban :
+        Pengujian manual adalah pengujian yang dilakukan secara manual oleh QA. Dalam pengujiannya QA 
+        memeriksa semua fitur pada software, untuk memastikan ada atau tidaknya bug dalam software. 
+        Biasanya pengujian secara manual dilakukan tanpa bantuan dari tools automated test. Manual testing 
+        berperan penting saat pengujian visual dimana automation tools tidak dapat melakukan.
+        Automated test bergantung pada pra-scripted tes yang berjalan secara otomatis, fungsinya untuk 
+        membandingkan hasil yang diharapkan dengan hasil yang sebenarnya. Sehingga dapat mengetahui apakah 
+        aplikasi berjalan sesuai dengan apa yang diharapkan, menggunakan automated testing dapat dilakukan 
+        secara berulang. Pada automation testing dibutuhkan tools untuk melakukan pengujiannya,seperti 
+        Selenium IDE. Menurut pendapat saya manual test sangat diperlukan karena dilakukan langsung oleh QA
+        yang mana dapat memberikan pandangan bagaimana perangkat lunak yang sedang dikembangkan akan diterima
+        atau bagaimana perangkat lunak akan disukai oleh para pengguna.
+
+        Referensi : 
+        https://medium.com/dot-intern/manual-testing-vs-automated-testing-9244aaed1ed5
