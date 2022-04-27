@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
     println("Tanggal Lahir ${student1.tanggalLahir}")
     println()
     
-    var student2:Student = Student()
+    var student2 = Student()
     student2.IDStudent = 4
     student2.nama = "Zhia Amirul Mukminin"
     student2.noHP = "081234567899"
@@ -25,11 +25,7 @@ fun main(args: Array<String>) {
     println("Tanggal Lahir ${student2.tanggalLahir}")
     println()
 
-    var student3:Student = Student()
-    student3.IDStudent = 4
-    student3.nama = "Dwi Nabela"
-    student3.noHP = "08123456799"
-    student3.tanggalLahir = "10 September 2002"
+    var student3 = Student(5,"Dwi Nabela","10 September 2002","08123456799")
     student3.nim = student3.generateNIM(student3.IDStudent,student3.nama, student3.tanggalLahir)
     println("Nama ${student3.nama}")
     println("No HP ${student3.noHP}")
