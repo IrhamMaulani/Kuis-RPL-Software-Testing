@@ -1,4 +1,4 @@
-class StudetnController(studentid: Int, nama: String, tlahir: String, nohp: String, nim: String) {
+class StudentController(studentid: Int, nama: String, tlahir: String, nohp: String, nim: String) {
     val maha = Student()
 
     fun getIdentitas(): String {

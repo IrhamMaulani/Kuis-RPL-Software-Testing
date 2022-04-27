@@ -15,14 +15,21 @@ class Student() {
     // Nama bertipe String, Contoh : Joko Tarbiah
 
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
-    var studentid: Int = 5
-    var nama: String = "Joko Tarbiah"
-    var tlahir: String = "10 Agustus 2019"
     var id = Locale("in", "ID")
     var dateformat = DateFormatSymbols(id)
-    var nohp: String = "081234567891"
 
-
+    var studentid:Int = 0
+        get() = field
+        set(value) { field = value }
+    var nama:String = ""
+        get() = field
+        set(value) { field = value }
+    var tlahir:String = ""
+        get() = field
+        set(value) { field = value }
+    var nohp:String = ""
+        get() = field
+        set(value) { field = value }
 
     fun getStudentDetails():String{
         return "ID : $studentid Nama :  $nama, Tanggal lahir : $tlahir, Nomor hp : $nohp"
@@ -55,9 +62,13 @@ class Student() {
     */
     class Orangtua() {
 
-        var ayah: String = "Stephen Sambura"
-        var ibu: String = "Stephani Sambruang"
-        fun displayortu(): Pair<String,String>{
+        var ayah :String = ""
+            get() = field
+            set(value) { field = value }
+        var ibu:String = ""
+            get() = field
+            set(value) { field = value }
+        fun displayortu() {
             println("Ayah : $ayah")
             println("Ibu : $ibu")
             return Pair(ayah,ibu)
@@ -79,6 +90,7 @@ class Student() {
         val c = sb.toString().substring(0, sb.length-2)
         println(c)
         return c
+
     }
     /*
     * NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
@@ -103,10 +115,9 @@ class Student() {
     * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
     * */
 
-    val getStudentArray: ArrayList<Student>
-        get() {
+    fun getStudentArray(): ArrayList<Student> {
             val Studentlist = ArrayList<Student>()
-            Studentlist.add(this)
+            Studentlist.add(Student())
 
             return Studentlist
         }
