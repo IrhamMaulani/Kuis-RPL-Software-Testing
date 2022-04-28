@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test
 
 internal class StudentTest {
     private lateinit var student: Student
-    private lateinit var parent: Student.OrangTua
+    private lateinit var parent: OrangTua
 
     @BeforeEach
     fun beforeEach() {
         student = Student(5, "Joko Tarbiah", "10 Agustus 2019", "08932123322")
-        parent = Student.OrangTua("Bapaknya Joko Stephen Sambura", "Ibunya Joko Stephani Sambruang")
+        parent = OrangTua("Bapaknya Joko Stephen Sambura", "Ibunya Joko Stephani Sambruang")
     }
 
     @Test
