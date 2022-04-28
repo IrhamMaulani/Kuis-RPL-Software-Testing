@@ -4,19 +4,25 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Student() {
+class Student {
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
     // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
 
     // properties student berisikan :
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
-    var id : Int = 0
+    var id: Int = 0
+        get() = field
+        set(value) {field=value}
 
     // Nama bertipe String, Contoh : Joko Tarbiah
     var nama : String = ""
+        get() = field
+        set(value) {field=value}
 
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
     var tanggalLahir : String = ""
+        get() = field
+        set(value) {field=value}
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
     fun convertDate(tanggalLahir:String) : String{
@@ -27,17 +33,10 @@ class Student() {
     }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
-    var noHp : String = "12345678910"
-    fun setNumPhone(number: String): String {
-        if (number.length<11 || number.length>12) return "Phone Number Is Not Valid"
-        else return number
-    }
-//        get() {
-//            if (noHp.length < 11 || noHp.length > 12) {
-//                return "Phone Number Is Not Valid"
-//            }
-//            else return noHp
-//        }
+    var noHp : String = ""
+        get() = field
+        set(value) {if (value.length<11||value.length>12) field="Phone Number Is Not Valid"
+        else field = value}
 
 
     /*
@@ -60,11 +59,11 @@ class Student() {
     * NIM nya menjadi : 5JT10082019
     * */
     fun generateNIM(id: Int, nama: String, tanggalLahir: String): String {
-        var inisial = nama.split(" ")
-        var satu = inisial[0].toCharArray()
-        var dua = inisial[1].toCharArray()
-        var tl = convertDate(tanggalLahir)
-        var format = tl.replace("-", "")
+        val inisial = nama.split(" ")
+        val satu = inisial[0].toCharArray()
+        val dua = inisial[1].toCharArray()
+        val tl = convertDate(tanggalLahir)
+        val format = tl.replace("-", "")
 
         val nim = "$id${satu[0]}${dua[0]}${format}"
         return nim

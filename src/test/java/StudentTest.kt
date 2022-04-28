@@ -27,7 +27,7 @@ internal class StudentTest {
 
     @Test
     fun testNoHpFalse() {
-        assertNotEquals("Phone Number Is Not Valid", student.setNumPhone(student.noHp))
-        assertEquals("12345678910", student.setNumPhone(student.noHp))
+        assertNotEquals("Phone Number Is Not Valid", student.noHp)
+        assertEquals("12345678910", student.noHp)
     }
 }
