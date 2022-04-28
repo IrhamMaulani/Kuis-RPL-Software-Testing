@@ -1,7 +1,7 @@
 import java.text.SimpleDateFormat
-import java.time.LocalDate
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.collections.List as List
 
 class Student() {
     // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
@@ -29,6 +29,8 @@ class Student() {
         this.Sbirth = Sbirth
         this.Snphone = Snphone
     }
+
+    fun getStudentInfo(): List<String> = listOf("$Sid", Sname, Sbirth, Snphone)
 
 
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy dari input 10 Agustus 2019
