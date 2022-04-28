@@ -2,7 +2,7 @@
 
 # Kuis 1 (90)
 1. Dewasa ini, pembuatan testing pada perangkat lunak umum dilakukan pada saat tahap implementasi yang dilakukan oleh software
-   engineer. Berikan opini kalian apakah software engineer pada tahap implementasi wajib melakukan test atau tidak?
+   engineerBerikan opini kalian apakah software engineer pada tahap implementasi wajib melakukan test atau tidak?
 
 2. Unit test dan integration test merupakan test yang dilakukan pada tahap implementasi. berikan pendapat kalian jika dua test
    ini tidak dilakukan beserta dampak yang akan terjadi pada perangkat lunak
@@ -33,3 +33,4 @@ Buatlah fungsi dan buatlah test pada class student sesuai petunjuk pada file cla
 2. Implementasikan repository dan service yang memiliki fungsi memanggil data list dari
    object student, memanggil data satu student dengan parameter ID. 
 Dan lakukan test untuk repository dan service. (Nilai 80)
+m
