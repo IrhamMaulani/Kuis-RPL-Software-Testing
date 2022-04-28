@@ -11,27 +11,33 @@ internal class StudentTest {
     }
 
     @Test
+    fun getFullIdentitySuccess(){
+        student = Student(1, "Maulana AlkaChar", "29 Oktober 2002", "082256401111")
+        assertEquals(listOf("1", "Maulana AlkaChar", "29 Oktober 2002", "082256401111"), student.getFullIdentification())
+    }
+
+    @Test
     fun testGetNIMSuccess(){
-        val student = Student(8,"Maulana Charalka", "22 Agustus 2000")
-        assertEquals("8MC22082000", student.NIM())
+        val student = Student(1,"Maulana Charlesalka", "29 Oktober 2002", "082212341234")
+        assertEquals("1MC29102002", student.NIM(student.id, student.nama, student.tglLahir))
     }
 
     @Test
     fun testFormatTglSuccess(){
-        var tanggal = "29 Oktober 2002"
+        val tanggal = "29 Oktober 2002"
         assertEquals("29-10-2002", student.formatTgl(tanggal))
     }
 
     @Test
     fun testGetNoHPSuccess1(){
-        val student = Student("082212341234")
-        assertEquals("082212341234", student.NoHP)
+        val student = Student(2,"Maulana Yaa", "22 Agustus 2000", "082212341234")
+        assertEquals("082212341234", student.getNoHP(student.noHP))
     }
 
     @Test
-    fun testGetNoHPSuccess2(){
-        val student = Student("08221234")
-        assertEquals("Phone Number Invalid", student.NoHP)
+    fun testGetNoHPFailed(){
+        val student = Student(3,"Charles Okee", "22 Mei 2000", "0822")
+        assertEquals("Phone Number Invalid", student.getNoHP(student.noHP))
     }
 
     @Test
@@ -46,12 +52,12 @@ internal class StudentTest {
 
     @Test
     fun testGetHobiSuccess() {
-        assertEquals("Deadliner", student.hobi[3])
+        assertEquals("Deadliner", student.hobi[2])
     }
 
     @Test
     fun testGetListSuccess(){
-        val student = Student(4,"Maulana Yaa", "22 Juni 2000")
+        val student = Student(1,"Maulana Yaa", "22 Juni 2000", "086212345678")
         assertEquals(student.getList(), arrayListOf(student))
     }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="StudentRepositoryTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-04-28T13:19:37" hostname="LAPTOP-HJJVRCR0" time="0.094">
+  <properties/>
+  <testcase name="testCariTanggalLahirFailed()" classname="StudentRepositoryTest" time="0.049"/>
+  <testcase name="testCariNIMSuccess()" classname="StudentRepositoryTest" time="0.03"/>
+  <testcase name="testCetakInfoStudentSuccess()" classname="StudentRepositoryTest" time="0.002"/>
+  <testcase name="testCaridNoHPSuccess()" classname="StudentRepositoryTest" time="0.001"/>
+  <testcase name="testCariNoHPFailed()" classname="StudentRepositoryTest" time="0.002"/>
+  <testcase name="testCariTanggalLahirSuccess()" classname="StudentRepositoryTest" time="0.001"/>
+  <testcase name="testCariNamaSuccess()" classname="StudentRepositoryTest" time="0.001"/>
+  <testcase name="testCariNIMFailed()" classname="StudentRepositoryTest" time="0.001"/>
+  <testcase name="testCariNamaFailed()" classname="StudentRepositoryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
