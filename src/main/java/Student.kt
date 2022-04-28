@@ -9,8 +9,12 @@ import java.util.*
 // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
 // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
 
-class Student(private var id: Int, private var name: String, private var birthday: String,
-              private var phoneNumber: String){
+class Student {
+    private var id: Int = 0
+    private lateinit var name: String
+    private lateinit var birthday: String
+    private lateinit var phoneNumber: String
+
         fun setId(id: Int){this.id = id}
         private fun getId() = this.id
         fun setName(name: String){this.name = name}
@@ -27,7 +31,7 @@ class Student(private var id: Int, private var name: String, private var birthda
 */
 
     fun identity(): String {
-        return "$id $name $birthday $phoneNumber"
+        return "${getId()} ${getName()} ${getBirthday()} ${getphoneNumber()}"
     }
 
     fun getphoneNumber(): String {
@@ -84,7 +88,7 @@ class Student(private var id: Int, private var name: String, private var birthda
     * */
     fun getListStudent(): ArrayList<Student> {
        val listStudent = ArrayList<Student>()
-       listStudent.add(Student(1, "Test name", "12 Desember 2001", "08934234432"))
+       listStudent.add(Student())
        for (each in listStudent){
            return listStudent
        }

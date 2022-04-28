@@ -9,12 +9,16 @@ internal class StudentTest {
 
     @BeforeEach
     fun beforeEach() {
-        student = Student(5, "Toko Tarbiah", "10 Maret 2019", "08932123322")
+        student = Student()
         parent = Student.Parent("Nama Bapak", "Nama Ibu")
     }
 
     @Test
     fun identity(){
+        student.setId(5)
+        student.setName("Toko Tarbiah")
+        student.setBirthday("10 Maret 2019")
+        student.setPhoneNumber("08932123322")
         val expected = "5 Toko Tarbiah 10 Maret 2019 08932123322"
         assertEquals(expected, student.identity())
     }
@@ -44,6 +48,7 @@ internal class StudentTest {
     fun generateNIM() {
         student.setName("Shiraishi Kamisato")
         student.setId(2)
+        student.setBirthday("10 Maret 2019")
         val expected = "2SK10032019"
         assertEquals(expected, student.generateNIM())
     }
