@@ -1,0 +1,33 @@
+SOAL
+1. Dewasa ini, pembuatan testing pada perangkat lunak umum dilakukan pada saat tahap implementasi yang dilakukan oleh software engineer. Berikan opini kalian apakah software engineer pada tahap implementasi wajib melakukan test atau tidak?
+2. Unit test dan integration test merupakan test yang dilakukan pada tahap implementasi. berikan pendapat kalian jika dua test ini tidak dilakukan beserta dampak yang akan terjadi pada perangkat lunak
+3. Berikan pendapat kalian tentang pekerjaan QA Engineer sedangkan disisi lain Software Engineer telah melakukan testing
+4. Terdapat banyak test pada perangkat lunak, mulai dari test business logic, UI, UX, Performa, sampai keamanan. Namun tidak semuanya dapat dilakukan karena keterbatasan waktu dan mahalnya biaya yang harus dikeluarkan. Berikan pendapat kalian dampak apa yang terjadi jika pengujian diatas tidak diberikan pada perangkat lunak
+5. Berikan pendapat kalian tentang testing perangkat lunak secara manual? Apakah di saat banyaknya testing secara otomatisasi dilakukan testing secara manual perlu dilakukan?
+
+JAWABAN
+1. Ya, Karena metode software testing untuk memeriksa dan memastikan perangkat lunak berjalan dengan baik,bertujuan untuk mengindentifikasi masalah, memastikan keamanan,dan kinerja perangkat lunak.
+
+https://www.niagahoster.co.id/blog/software-engineer/#2_Software_Testing
+
+2. Berdasarkan dari yang saya baca di situs https://medium.com/qa-malang/8-jenis-software-testing-5a884e806a6d, Unit test merupakan metode verifikasi untuk memastikan kode yang di buat telah memenuhi syarat dan sesuai yang diharapkan,yaitu berfokus pada verifikasi fungsi,method,dan event. Sedangkan Integration testing digunakan untuk pengujian perangkat lunak,apakah berfungsi dengan baik ketika terintegrasi.
+Dampak yang akan terjadi jika tidak melalukan dua test tersebut maka sebuah perangkat lunak mengalami disfunctional,artinya beberapa fitur atau seluruh fitur mengalami error ketika ingin digunakan.
+
+3. Berdasarkan yang saya baca di situs https://glints.com/id/lowongan/qa-quality-assurance-engineer/ QA Engineer atau quality assurance engineer akan memeriksa mutu aplikasi seperti melakukan Unit test dan Integration test.
+Sedangkan Software engineer tanggung jawab mereka sama,tetapi terdapat letak perbedaan seperti lingkup kerja,dan beberapa tugas utama lainnya.
+Jadi,jika Software engineer telah melakukan test,maka QA engineer akan memastikan lagi bagaimana dari sisi customer experience pada perangkat lunak
+
+4. Berdasarkan situs https://testfort.com/blog/business-logic-in-qa-and-its-role-in-the-development-of-perfect-software , Business logic merupakan sistem untuk memandu bagaimana objek bisnis bekerja satu sama lain
+sedangkan untuk UI dan UX berdasarkan pada situs " https://www.testgorilla.com/test-library/role-specific-skills-tests/ux-ui-design-test/ " ,
+Pengujian UX berfokus apakah pengguna menikmati pengalaman serta kemudahan dari titik A ke B tanpa ada kendala
+Pengujian UI berfokus memastikan pada layar visual pengguna telah sesuai dengan jalur A dan jalur B sehingga pengguna dengan mudah berinteraksi ke perangkat lunak
+Jadi pendapat saya, test business logic jika tidak dilakukan maka pada perangkat lunak tidak dapat memandu fungsi dari sistem, UI dan UX yang merupakan antarmuka pada perangkat lunak tidak akan tau apakah pengguna dapat mengakses fitur dengan mudah atau visual yang diberikan tidak sesuai,untuk performa dan keamanan dapat disimpulkan jika performa dalam suatu perangkat lunak tidak diuji maka kita tidak akan tau apakah ketika banyak pengguna mengakses akan membuat perangkat lunak menjadi malfungsi atau tidak,sedangkan pada sisi keamanan sangat penting untuk diuji karena mencegah terjadinya kebocoran data dan seharusnya untuk performa dan keamanan ini perlu di update dan maintenance setiap bulannya.
+
+5. Berdasarkan yang saya baca di situs https://medium.com/dot-intern/manual-testing-vs-automated-testing-9244aaed1ed5
+Manual testing adalah pengujian oleh QA untuk memeriksa semua fitur pada software, untuk memastikan apakah ada bug atau tidak dalam software.
+Automation testing berfungsi untuk membandingkan hasil yang diharapkan dengan hasil sebenarnya,dengan automated testing pengujian dapat dilakukan secara berulang
+Manual testing diperlukan jika automated testing tidak dapat dijalankan. Adapun beberapa kelebihan manual testing ialah
+- Mendapatkan visual feedback
+- Bisa mendapatkan feedback dari orang secara langsung sehingga mengetahui user suka atau tidak
+- lebih murah dalam proyek jangka pendek,maka manual testing tidak perlu menggunakan tools ataupun software yang mahal
+- Bisa menghemat waktu
