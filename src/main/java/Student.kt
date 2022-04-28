@@ -16,19 +16,25 @@ class Student() {
     var id = Locale("in", "ID")
     var dateformat = DateFormatSymbols(id)
 
-    var studentid:Int = 0
-        get() = field
-        set(value) { field = value }
-    var nama:String = ""
-        get() = field
-        set(value) { field = value }
-    var tlahir:String = ""
-        get() = field
-        set(value) { field = value }
-    var nohp:String = ""
-        get() = field
-        set(value) { field = value }
+    var studentid: Int
+    var nama: String
+    var tlahir: String
+    var nohp: String
 
+
+    constructor(id: Int, nama: String, tanggalLahir: String, nomorHp: String): this(){
+        this.studentid = studentid
+        this.nama = nama
+        this.tlahir = tlahir
+        this.nohp = nohp
+    }
+
+    init {
+        this.studentid = 0
+        this.nama = ""
+        this.tlahir = ""
+        this.nohp = ""
+    }
     fun getStudentDetails():String{
         return "ID : $studentid Nama :  $nama, Tanggal lahir : $tlahir, Nomor hp : $nohp"
     }
@@ -39,7 +45,7 @@ class Student() {
         val date = LocalDate.parse(tlahir, formatter)
         val hasil = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
 
-        return hasil
+        return (hasil)
     }
 
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
