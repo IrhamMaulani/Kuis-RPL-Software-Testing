@@ -20,13 +20,21 @@ internal class StudentTest {
 
     //Masih Error Tanggalnya
     @Test
-    fun testTangleSuccess() {
+    fun testTangalSuccess() {
         val expected = "14-02-2002"
         assertEquals(expected,student.tanggal())
     }
 
     @Test
+    fun testPhonenumFailed() {
+        student.nohp = "0831501955371"
+        val expected = "Panjang nomor tidak sesuai"
+        assertEquals(expected,student.Phonenum())
+    }
+
+    @Test
     fun testPhonenumSuccess() {
+        student.nohp = "083150195537"
         val expected = "083150195537"
         assertEquals(expected,student.Phonenum())
     }
@@ -49,12 +57,6 @@ internal class StudentTest {
         val expected = "5BA14022002"
         assertEquals(expected,student.genNIM())
     }
-
-    //@Test
-    //fun testStudentArrayList() {
-        //val student = Student(5, "Biahlil Akbar", "14 Februari 2002", "083150195537")
-        //assertEquals(student.getStudentArray(), arrayListOf(student))
-    //}
 
 }
 
