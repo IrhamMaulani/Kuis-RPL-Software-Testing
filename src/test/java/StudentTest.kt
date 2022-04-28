@@ -1,67 +1,49 @@
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.util.*
 
 internal class StudentTest {
     private lateinit var student: Student
-    
-    @Test
-    fun testFullIdentificationSuccess() {
-        val student = Student(5, "Joko Tarbiah", "10 Agustus 2019", "085312345678")
-        assertEquals(listOf("5", "Joko Tarbiah", "10 Agustus 2019", "085312345678"), student.getFullIdentification())
-    }
-    
-    @Test
-    fun testSetPhoneNumberSuccess(){
-        val noHp = student.setPhoneNum("085312345678")
-        assertEquals("085312345678", noHp)
+    private lateinit var parent: Student.OrangTua
+
+    @BeforeEach
+    fun beforeEach() {
+        student = Student(5, "Joko Tarbiah", "10 Agustus 2019", "08932123322")
+        parent = Student.OrangTua("Bapaknya Joko Stephen Sambura", "Ibunya Joko Stephani Sambruang")
     }
 
     @Test
-    fun testSetPhoneNumberError(){
-        val noHp = student.setPhoneNum("0853")
-        assertEquals("Syarat nomor yaitu 11 dan 12 angka", noHp)
+    fun GetFullIdentification(){
+        val expectation = "5 Joko Tarbiah 10 Agustus 2019 08932123322"
+        assertEquals(expectation, student.GetFullIdentification())
     }
 
     @Test
-    fun testSetPhoneNumberFailed(){
-        val noHp = student.setPhoneNum("0853")
-        assertEquals(noHp,"Syarat nomor yaitu 11 dan 12 angka")
+    fun NameSucces(){
+        student.setName("Joko Tarbiah")
+        val expectation = "Joko Tarbiah"
+        assertEquals(expectation, student.getName())
     }
 
     @Test
-    fun testTanggalLahir(){
-        val ttl = "10 Agustus 2019"
-
-        val format = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale("in", "ID"))
-        val tanggal = LocalDate.parse(ttl, format)
-        val expectation = tanggal.format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale("in", "ID")))
-
-        assertEquals(expectation, ttl, "Penulisan Tanggal Salah")
+    fun phoneNumberSuccess(){
+        student.setPhoneNumber("089321233221")
+        val expectation = "089321233221"
+        assertEquals(expectation, student.getphoneNumber())
     }
 
     @Test
-    fun testFormatTanggal(){
-        val ttl = "10 Agustus 2019"
-
-        val format = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale("in", "ID"))
-        val tanggal = LocalDate.parse(ttl, format)
-        val expectation = tanggal.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
-
-        assertEquals(expectation, student.formattedTTL(ttl))
+    fun phoneNumberInvalid(){
+        student.setPhoneNumber("0812345678910")
+        val expectation = "Number Invalid"
+        assertEquals(expectation, student.getphoneNumber())
     }
 
-    @Test
-    fun testNIMSuccess(){
-        val data = student.setNIM(5, "Joko Tarbiah", "10 Agustus 2019")
-        assertEquals("5JT10082019", data)
-    }
+
 
     @Test
-    fun testStudentArrayList() {
-        val student = Student(5, "Joko Tarbiah", "10 Agustus 2019", "085312345678")
-        assertEquals(student.studentArrayList, arrayListOf(student))
+    fun parent(){
+        val expectation = "Bapaknya Joko Stephen Sambura, Ibunya Joko Stephani Sambruang"
+        assertEquals(expectation, parent.show())
     }
 }
