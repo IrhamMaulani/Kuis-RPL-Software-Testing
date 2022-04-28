@@ -1,46 +1,61 @@
 import org.junit.jupiter.api.Assertions.*
-
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 internal class StudentTest {
+    private lateinit var student: Student
+    private lateinit var orangtua: Student.Orangtua
 
-    val student = Student()
+    @BeforeEach
+    fun beforeEach(){
+        student = Student()
+        student.studentid = 5
+        student.nama = "Biahlil Akbar"
+        student.nohp = "083150195537"
+        student.tlahir = "14 February 2002"
+        orangtua = Student.Orangtua()
+        orangtua.ayah = "Joko Tarbiah"
+        orangtua.ibu = "Siti Amanah"
+    }
+
+    //Masih Error Tanggalnya
     @Test
-    fun testTanggalSucces() {
-        val expected = "10-08-2019"
-        assertEquals(expected, student.tanggal())
+    fun testTangleSuccess() {
+        val expected = "14-02-2002"
+        assertEquals(expected,student.tanggal())
     }
 
     @Test
-    fun testPhonenumSucces() {
-        val expected = student.nohp
+    fun testPhonenumSuccess() {
+        val expected = "083150195537"
         assertEquals(expected,student.Phonenum())
     }
 
     @Test
-    fun testOrangtuaSucces() {
-        val ortu = Student.Orangtua()
-        val (ayah,ibu) = ortu.displayortu()
-        assertEquals(Pair(ayah,ibu),ortu.displayortu())
+    fun testOrangtuaSuccess() {
+        val ayah = "Joko Tarbiah"
+        val ibu = "Siti Amanah"
+        assertEquals(Pair(ayah,ibu),orangtua.displayortu())
     }
 
     @Test
-    fun testArrayHobiSucces() {
+    fun testArrayHobiSuccess() {
         val expected = "Bersepeda , Bernyanyi , Makan "
         assertEquals(expected,student.arrayhobi())
     }
 
     @Test
     fun testGenNIMSucces() {
-        val expected = "5JT10082019"
+        val expected = "5BA14022002"
         assertEquals(expected,student.genNIM())
     }
 
     @Test
     fun testGetStudentArry (){
-        val array = student.getStudentArray
-        assertEquals(array,student.getStudentArray)
+        val array = student.getStudentArray()
+            assertEquals(array,student.getStudentArray())
     }
 
 
 }
+

@@ -5,16 +5,14 @@ import java.util.*
 
 class Student() {
 
-    // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
-    // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
-
-    // properties student berisikan :
-
-    // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
-
-    // Nama bertipe String, Contoh : Joko Tarbiah
 
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
+    // Nama bertipe String, Contoh : Joko Tarbiah
+    // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
+    // properties student berisikan :
+    // Dan buatkan test pada setiap fungsi yang memastikan bahwa fungsi berjalan baik.
+    // Impelementasikan properties dan fungsi sesuai spesifikasi dibawah
+
     var id = Locale("in", "ID")
     var dateformat = DateFormatSymbols(id)
 
@@ -68,7 +66,7 @@ class Student() {
         var ibu:String = ""
             get() = field
             set(value) { field = value }
-        fun displayortu() {
+        fun displayortu() :Pair<String,String> {
             println("Ayah : $ayah")
             println("Ibu : $ibu")
             return Pair(ayah,ibu)
@@ -107,7 +105,7 @@ class Student() {
         /*pake hasil dibagian baris 40 biar udh ke reformat*/
 
         val nim = "$studentid$inisial$tgl"
-        return "$studentid$inisial$tgl";
+        return nim;
 
     }
 
