@@ -50,11 +50,11 @@ internal class StudentTest {
         assertEquals(expected,student.genNIM())
     }
 
-    @Test
-    fun testStudentArrayList() {
-        val student = Student(5, "Biahlil Akbar", "14 Februari 2002", "083150195537")
-        assertEquals(student.getStudentArray(), arrayListOf(student))
-    }
+    //@Test
+    //fun testStudentArrayList() {
+        //val student = Student(5, "Biahlil Akbar", "14 Februari 2002", "083150195537")
+        //assertEquals(student.getStudentArray(), arrayListOf(student))
+    //}
 
 }
 
