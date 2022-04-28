@@ -12,7 +12,7 @@ internal class StudentTest {
         student.studentid = 5
         student.nama = "Biahlil Akbar"
         student.nohp = "083150195537"
-        student.tlahir = "14 February 2002"
+        student.tlahir = "14 Februari 2002"
         orangtua = Student.Orangtua()
         orangtua.ayah = "Joko Tarbiah"
         orangtua.ibu = "Siti Amanah"
