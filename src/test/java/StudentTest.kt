@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test
 
 internal class StudentTest {
     private lateinit var student: Student
-    private lateinit var parent: OrangTua
+    private lateinit var ortu: OrangTua
 
     @BeforeEach
     fun beforeEach() {
         student = Student(5, "Joko Tarbiah", "10 Agustus 2019", "08932123322")
-        parent = OrangTua("Bapaknya Joko Stephen Sambura", "Ibunya Joko Stephani Sambruang")
+        ortu = OrangTua("Bapaknya Joko Stephen Sambura", "Ibunya Joko Stephani Sambruang")
     }
 
     @Test
@@ -44,6 +44,6 @@ internal class StudentTest {
     @Test
     fun parent(){
         val expectation = "Bapaknya Joko Stephen Sambura, Ibunya Joko Stephani Sambruang"
-        assertEquals(expectation, parent.show())
+        assertEquals(expectation, ortu.show())
     }
 }
