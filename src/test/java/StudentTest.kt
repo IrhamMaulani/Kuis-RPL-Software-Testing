@@ -1,6 +1,9 @@
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 internal class StudentTest {
     private lateinit var student: Student
@@ -8,42 +11,72 @@ internal class StudentTest {
 
     @BeforeEach
     fun beforeEach() {
-        student = Student(5, "Joko Tarbiah", "10 Agustus 2019", "08932123322")
-        ortu = OrangTua("Bapaknya Joko Stephen Sambura", "Ibunya Joko Stephani Sambruang")
+        student = Student()
+        ortu = OrangTua("Stephen Sambura", "Stephani Sambruang")
     }
 
     @Test
-    fun GetFullIdentification(){
-        val expectation = "5 Joko Tarbiah 10 Agustus 2019 08932123322"
-        assertEquals(expectation, student.GetFullIdentification())
+    fun testFullIdentificationSuccess() {
+        val student = Student(5, "Jaka Tarbiah", "10 Agustus 2019", "085312345678")
+        assertEquals("5 Jaka Tarbiah 10 Agustus 2019 085312345678", student.getFullIdentification())
     }
 
     @Test
-    fun NameSucces(){
-        student.setName("Joko Tarbiah")
-        val expectation = "Joko Tarbiah"
-        assertEquals(expectation, student.getName())
+    fun testTanggal(){
+        val tanggal = "10 Agustus 2019"
+
+        val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale("in", "ID"))
+        val date = LocalDate.parse(tanggal, formatter)
+        val expectation = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
+        assertEquals(expectation, student.formattedTanggalLahir("10 Agustus 2019"))
     }
 
     @Test
-    fun phoneNumberSuccess(){
-        student.setPhoneNumber("089321233221")
-        val expectation = "089321233221"
-        assertEquals(expectation, student.getphoneNumber())
+    fun testFormattedDate(){
+        val result = student.formattedTanggalLahir("10 Agustus 2019")
+        val expectation = "10-08-2019"
+        assertEquals(expectation, result)
     }
 
     @Test
-    fun phoneNumberInvalid(){
-        student.setPhoneNumber("0812345678910")
-        val expectation = "Number Invalid"
-        assertEquals(expectation, student.getphoneNumber())
+    fun testSetHobiSuccess(){
+        val hobi = listOf("Bersepeda", "Bermain", "Menyanyi")
+        assertEquals("[Bersepeda, Bermain, Menyanyi]", student.hobi(hobi).toString())
     }
 
-
-
     @Test
-    fun parent(){
-        val expectation = "Bapaknya Joko Stephen Sambura, Ibunya Joko Stephani Sambruang"
+    fun testOrtu(){
+        val expectation = "ayah: Stephen Sambura, ibu: Stephani Sambruang"
         assertEquals(expectation, ortu.show())
+    }
+
+    @Test
+    fun testGetPhoneNumberSuccess(){
+        val noHp = student.getPhoneNumber("085312345678")
+        assertEquals("085312345678", noHp)
+    }
+
+    @Test
+    fun testGetPhoneNumberHPError(){
+        val noHp = student.getPhoneNumber("0853")
+        assertEquals("Number Invalid", noHp)
+    }
+
+    @Test
+    fun testGetPhoneNumberFailed(){
+        val noHp = student.getPhoneNumber("0853")
+        assertEquals(noHp,"Number Invalid")
+    }
+
+    @Test
+    fun testNIMSuccess(){
+        val data = student.setNIM(5, "Joko Tarbiah", "10 Agustus 2019")
+        assertEquals("5JT10082019", data)
+    }
+
+    @Test
+    fun testStudentArrayList() {
+        val student = Student(5, "Joko Tarbiah", "10 Agustus 2019", "085312345678")
+        assertEquals(student.getStudentArrayList, arrayListOf(student))
     }
 }

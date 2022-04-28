@@ -3,63 +3,56 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Student
+class Student()
 {
-    private var id:Int
-    private var name: String
-    private var ttl: String
-    private var phoneNum: String
-    constructor(id: Int, name: String, ttl: String, phoneNum: String){
+    var indonesia = Locale("in", "ID")
+    var id:Int
+    var name: String
+    var tanggal: String
+    var phoneNum: String
+    lateinit var ayah: String
+    lateinit var ibu: String
+    constructor(id: Int, name: String, tanggal: String, phoneNum: String) : this() {
     this.id = id
     this.name = name
-    this.ttl = ttl
+    this.tanggal = tanggal
     this.phoneNum = phoneNum
-}
+    }
+
+    init{
+        this.id = 0
+        this.name = ""
+        this.tanggal = ""
+        this.phoneNum = ""
+    }
+
+    fun getFullIdentification(): String = "$id $name $tanggal $phoneNum"
     // ID yang memiliki tipe data INT dan hanya diisi bilangan bulat Contoh : 5
-
-    fun setId(id: Int){
-        this.id = id
-    }
-    private fun getId() = this.id
-
-
-    // Nama bertipe String, Contoh : Joko Tarbiah
-
-    fun setName(name: String){
-        this.name = name
-    }
-    fun getName() = this.name
-
-
+    //--
+    // Nama bertipe String, Contoh : Joko Tarbia
+    //--
     // Tanggal lahir bertipe String, contoh : 10 Agustus 2019
-    fun setTtl(ttl: String){
-        this.ttl = ttl
-    }
-    private fun getTtl() = this.ttl
-
-
+    //--
     // fungsi yang mengubah format tanggal lahir menjadi standar tanggal dd-mm-yyyy. Contoh : 10-08-2019
+    fun formattedTanggalLahir(tanggal: String): String {
 
+        val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", indonesia)
+        val date = LocalDate.parse(tanggal, formatter)
+        val formattedDate = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
 
-
+        return (formattedDate)
+    }
     // Nomor handphone bertipe String yang memiliki syarat minimal panjang huruf 11 dan maksimal 12
-    fun setPhoneNumber(phoneNumber: String){this.phoneNum = phoneNumber}
-    fun getphoneNumber(): String {
-        return if (phoneNum.length == 11 || phoneNum.length == 12) {
-            phoneNum
+    fun getPhoneNumber(phoneNumber: String): String{
+        return if (phoneNumber.length == 11 || phoneNumber.length == 12) {
+            return phoneNumber
         } else return "Number Invalid"
     }
 
-
-    fun GetFullIdentification(): String {
-        return "$id $name $ttl $phoneNum"
-    }
-
-
     //  Orang tua bertipe Object yang berisi String nama kedua orang tua.
-
     //  Contoh : {"ayah" : "Stephen Sambura", "Ibu" : "Stephani Sambruang"}
 
+    var orangTua = OrangTua("Stephen Sambura", "Stephani Sambruang")
 
     /*NIM yang memiliki tipe data String yang bersifat OTOMATIS di generate saat pembuatan object Student
     dan merupakan kode yang berupa gabungan ID, huruf pertama dan akhir dari nama student,
@@ -67,16 +60,32 @@ class Student
     Tanggal Lahir : 10 Agustus 2019.
     NIM nya menjadi : 5JT10082019
     */
-
-
+    fun setNIM(id: Int, name: String, tanggal: String): String{
+        var tempName = ""
+        if (" " in name){
+            var x = 0
+            val tempArray: List<String> = name.split(" ")
+            while (x < tempArray.size) {
+                tempName += tempArray[x].take(1)
+                x++
+            }
+        }
+        else tempName = name.take(1)
+        val tempTanggal: String = formattedTanggalLahir(tanggal)
+            .replace("-","")
+        return "${id.toString()}${tempName}${tempTanggal}"
+    }
     /* Hobi yang bertipe array atau list atau arraylist yang berisikan string
        contoh : ['Bersepeda', 'Bernyanyi', 'Makan'] */
 
-    var hobi = mutableListOf<String>("Bersepeda", "Bernyanyi", "Makan")
+    fun hobi(array: List<String>): List<String>{
+        val hobi = array.toList()
+    return hobi
+    }
     /*
      * sebuah fungsi yang dapat mengembalikan nilai berbentuk ArrayList dengan tipe data Object Student
      * */
-    val studentArrayList: ArrayList<Student>
+    val getStudentArrayList: ArrayList<Student>
         get() {
             val list = ArrayList<Student>()
             list.add(this)
@@ -84,10 +93,8 @@ class Student
         }
 }
 
-class OrangTua(private var ayah: String, private var ibu: String){
-    private fun getAyah() = this.ayah
-    private fun getIbu() = this.ibu
+class OrangTua(var ayah: String, var ibu: String){
     fun show (): String {
-        return("${getAyah()}, ${getIbu()}")
+        return("ayah: $ayah, ibu: $ibu")
     }
 }
