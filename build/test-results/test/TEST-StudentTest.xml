@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="StudentTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-04-28T12:40:02" hostname="FEMN" time="1.068">
+  <properties/>
+  <testcase name="testTanggal()" classname="StudentTest" time="0.981"/>
+  <testcase name="testFullIdentificationSuccess()" classname="StudentTest" time="0.001"/>
+  <testcase name="testGetPhoneNumberHPError()" classname="StudentTest" time="0.001"/>
+  <testcase name="testOrtu()" classname="StudentTest" time="0.001"/>
+  <testcase name="testSetHobiSuccess()" classname="StudentTest" time="0.05"/>
+  <testcase name="testStudentArrayList()" classname="StudentTest" time="0.013"/>
+  <testcase name="testFormattedDate()" classname="StudentTest" time="0.001"/>
+  <testcase name="testGetPhoneNumberFailed()" classname="StudentTest" time="0.001"/>
+  <testcase name="testGetPhoneNumberSuccess()" classname="StudentTest" time="0.001"/>
+  <testcase name="testNIMSuccess()" classname="StudentTest" time="0.013"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
